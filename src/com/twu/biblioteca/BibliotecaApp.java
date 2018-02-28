@@ -7,6 +7,6 @@ public class BibliotecaApp {
     }
 
     public static String sampleGreeting() {
-        return "";
+        return "Welcome to Biblioteca";
     }
 }
