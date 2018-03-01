@@ -11,10 +11,5 @@ public class ExampleTest {
         assertEquals(1, 1);
     }
 
-    @Test
-    public void greetingTest() {
-        String greeting = BibliotecaApp.sampleGreeting();
-        assertEquals(greeting, "Welcome to Biblioteca");
-    }
 }
 

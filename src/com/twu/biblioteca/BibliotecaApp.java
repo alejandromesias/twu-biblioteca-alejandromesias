@@ -6,7 +6,5 @@ public class BibliotecaApp {
         System.out.println("Hello, world!");
     }
 
-    public static String sampleGreeting() {
-        return "Welcome to Biblioteca";
-    }
+
 }
