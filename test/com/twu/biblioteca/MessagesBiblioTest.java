@@ -1,11 +1,12 @@
 package com.twu.biblioteca;
 
 import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-public class MessagesTest {
+public class MessagesBiblioTest {
     @Test
     public void shouldReturnWelcome() {
-        String welcomeMessage = Messages.welcome();
+        String welcomeMessage = MessagesBiblio.welcome();
 
         assertEquals(welcomeMessage,"Welcome to Biblioteca!- Enjoy Books");
     }
