@@ -8,6 +8,6 @@ public class MessagesBiblioTest {
     public void shouldReturnWelcome() {
         String welcomeMessage = MessagesBiblio.welcome();
 
-        assertEquals(welcomeMessage,"Welcome to Biblioteca! Enjoy");
+        assertEquals("Welcome to Biblioteca! Enjoy", welcomeMessage);
     }
 }
