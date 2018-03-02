@@ -12,15 +12,15 @@ public class SingleBook {
     }
 
     public String getName() {
-        return "";
+        return this.name;
     }
 
     public String getAuthor() {
-        return "";
+        return this.author;
     }
 
     public int getYear() {
-        return -1;
+        return this.year;
     }
 
 
