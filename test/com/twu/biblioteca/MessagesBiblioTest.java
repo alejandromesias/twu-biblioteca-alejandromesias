@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 public class MessagesBiblioTest {
     @Test
-    public void shouldReturnWelcome() {
+    public void shouldReturnTheWelcomeMessage() {
         String welcomeMessage = MessagesBiblio.welcome();
 
         assertEquals("Welcome to Biblioteca! Enjoy", welcomeMessage);
