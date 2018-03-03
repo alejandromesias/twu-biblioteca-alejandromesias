@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9019f2ae-0651-4b75-8e58-d9459b550751" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/ViewBookLister.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/ViewBookLister.java" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/ViewBookListerTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/ViewBookListerTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -476,9 +475,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ViewBookListerTest - 2018.03.02 at 22h 49m 55s.xml">
-      <configuration name="ViewBookListerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ViewBookListerTest - 2018.03.02 at 22h 50m 46s.xml">
       <configuration name="ViewBookListerTest" configurationId="JUnit" />
     </history-entry>
@@ -504,6 +500,9 @@
       <configuration name="ViewBookListerTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ViewBookListerTest - 2018.03.03 at 06h 46m 15s.xml">
+      <configuration name="ViewBookListerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ViewBookListerTest - 2018.03.03 at 06h 48m 52s.xml">
       <configuration name="ViewBookListerTest" configurationId="JUnit" />
     </history-entry>
   </component>
