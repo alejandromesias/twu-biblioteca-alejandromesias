@@ -25,7 +25,7 @@ public class ViewBookListerTest {
 
     @Test
     public void shouldDisplaytheBookList() {
-        System.out.print("content");
+        ViewBookLister.display();
         assertEquals("content", printedOutput.toString());
     }
 }
