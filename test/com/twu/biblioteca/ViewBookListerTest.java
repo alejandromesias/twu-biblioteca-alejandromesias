@@ -26,6 +26,8 @@ public class ViewBookListerTest {
     @Test
     public void shouldDisplaytheBookList() {
         ViewBookLister.display();
-        assertEquals("content", printedOutput.toString());
+        String content = "mockBook0\nmockBook1\n";
+
+        assertEquals(content, printedOutput.toString());
     }
 }
