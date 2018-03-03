@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9019f2ae-0651-4b75-8e58-d9459b550751" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/ViewBookLister.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/ViewBookListerTest.class" afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/ViewBookListerTest.class" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/ViewBookLister.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/ViewBookLister.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -123,7 +121,7 @@
               <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="e#92#93#0" expanded="true" />
-                <element signature="e#130#131#0" expanded="true" />
+                <element signature="e#135#136#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -486,11 +484,11 @@
     <history-entry file="ViewBookListerTest - 2018.03.02 at 22h 47m 43s.xml">
       <configuration name="ViewBookListerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.01 at 15h 19m 00s.xml">
-      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
+    <history-entry file="ViewBookListerTest - 2018.03.02 at 22h 49m 55s.xml">
+      <configuration name="ViewBookListerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.01 at 21h 02m 12s.xml">
-      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
+    <history-entry file="ViewBookListerTest - 2018.03.02 at 22h 50m 46s.xml">
+      <configuration name="ViewBookListerTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.02 at 07h 43m 42s.xml">
       <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
@@ -672,7 +670,7 @@
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="e#92#93#0" expanded="true" />
-            <element signature="e#130#131#0" expanded="true" />
+            <element signature="e#135#136#0" expanded="true" />
           </folding>
         </state>
       </provider>
