@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class SingleBookTest {
 
     @Test
-    public void shouldBeANewCreatedBook() {
+    public void shouldHaveCreatedANewBook() {
         SingleBook aBook = new SingleBook("testName", "testAuthor", 2000);
 
         assertEquals("testName", aBook.getName());
