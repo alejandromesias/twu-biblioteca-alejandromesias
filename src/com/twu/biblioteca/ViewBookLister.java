@@ -10,8 +10,10 @@ public class ViewBookLister {
 
         booksList = BookLister.getAllBooks();
 
+        String threeColumsFormat = "%-15s%-15s%-5s%n";
+
         for (SingleBook book : booksList) {
-            System.out.println(book.getName());
+            System.out.format(threeColumsFormat, book.getName(), book.getAuthor(), book.getYear());
         }
 
     }
