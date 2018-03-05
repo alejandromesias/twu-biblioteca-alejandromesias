@@ -17,6 +17,5 @@ public class MenuOption {
     public String getOptionId() {
         return optionId;
     }
-
-
+    
 }
