@@ -7,7 +7,7 @@ public class ViewMainMenu {
 
         int optionIndex = 1;
         for (String option: menuOptions) {
-            System.out.println(optionIndex + ". ");
+            System.out.println(optionIndex + ". " + option);
         }
 
     }
