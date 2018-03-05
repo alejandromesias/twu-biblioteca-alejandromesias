@@ -25,8 +25,8 @@ public class ViewMessagesBiblioTest {
 
     @Test
     public void shouldDisplayTheWelcomeMessage() {
+        String wellcomeMessage = MessagesBiblio.welcome()+"\n";
         ViewMessagesBiblio.welcome();
-        String wellcomeMessage = MessagesBiblio.welcome();
         assertEquals(wellcomeMessage, printedOutput.toString());
     }
 }

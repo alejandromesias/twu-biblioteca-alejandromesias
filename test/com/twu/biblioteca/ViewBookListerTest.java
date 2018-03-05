@@ -25,12 +25,13 @@ public class ViewBookListerTest {
 
     @Test
     public void shouldDisplayTheBookList() {
-        ViewBookLister.display();
+
         String row0 = "mockBook0      author0        2000 \n";
         String row1 = "mockBook1      author1        2001 \n";
         String row2 = "mockBook2      author2        2002 \n";
         String listContent = row0 + row1 + row2;
 
+        ViewBookLister.display();
         assertEquals(listContent, printedOutput.toString());
     }
 }
