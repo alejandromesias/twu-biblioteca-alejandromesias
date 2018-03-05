@@ -15,4 +15,8 @@ public class MainMenu {
 
         return options;
     }
+
+    public static String retrieveOption(String selectedOption){
+        return "";
+    }
 }

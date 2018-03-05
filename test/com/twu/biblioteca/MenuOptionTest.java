@@ -13,4 +13,5 @@ public class MenuOptionTest {
         assertEquals("labelForOption", anOption.getOptionLabel());
         assertEquals("X", anOption.getOptionId());
     }
+
 }
