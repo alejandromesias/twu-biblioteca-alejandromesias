@@ -29,7 +29,7 @@ public class ViewMainMenuTest {
         String row0 = "a. List Books\n";
         String row1 = "b. Second option\n";
 
-        String menuContent = row0;
+        String menuContent = row0 + row1;
 
         ViewMainMenu.display();
         assertEquals(menuContent, printedOutput.toString());
