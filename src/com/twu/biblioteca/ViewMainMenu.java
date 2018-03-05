@@ -18,6 +18,8 @@ public class ViewMainMenu {
         Scanner scan = new Scanner(System.in);
         String userChoice = scan.next();
 
-        System.out.println("List Books");
+        String optionLabel = MainMenu.retrieveOption(userChoice);
+
+        System.out.println(optionLabel);
     }
 }

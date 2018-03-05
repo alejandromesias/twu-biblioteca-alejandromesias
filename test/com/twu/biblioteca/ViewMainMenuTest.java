@@ -40,7 +40,7 @@ public class ViewMainMenuTest {
     @Test
     public void shouldDisplayTheChosenOptionA() {
 
-        String mockInput = "a";
+        String mockInput = "c";
         InputStream menuInput = new ByteArrayInputStream(mockInput.getBytes());
         System.setIn(menuInput);
 
