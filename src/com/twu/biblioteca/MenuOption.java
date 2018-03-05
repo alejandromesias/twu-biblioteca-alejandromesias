@@ -2,8 +2,8 @@ package com.twu.biblioteca;
 
 public class MenuOption {
 
-    String optionLabel;
-    String optionId;
+    private String optionLabel;
+    private String optionId;
 
     public MenuOption(String optionLabel, String optionId) {
         this.optionLabel = optionLabel;
