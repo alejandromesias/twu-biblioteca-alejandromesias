@@ -5,6 +5,10 @@ public class ViewMainMenu {
     public static void display(){
         String[] menuOptions = MainMenu.getOptions();
 
-        System.out.println(menuOptions[0]);
+        int optionIndex = 1;
+        for (String option: menuOptions) {
+            System.out.println(optionIndex + ". ");
+        }
+
     }
 }

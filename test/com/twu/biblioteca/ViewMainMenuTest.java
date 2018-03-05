@@ -26,9 +26,12 @@ public class ViewMainMenuTest {
     @Test
     public void shouldDisplayTheWelcomeMessage() {
 
-        String row0 = "List Books\n";
+        String row0 = "1. List Books\n";
+        String row1 = "2. Second option\n";
+
+        String menuContent = row0;
 
         ViewMainMenu.display();
-        assertEquals(row0, printedOutput.toString());
+        assertEquals(menuContent, printedOutput.toString());
     }
 }
