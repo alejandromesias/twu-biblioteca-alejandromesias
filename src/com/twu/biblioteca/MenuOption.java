@@ -11,13 +11,11 @@ public class MenuOption {
     }
 
     public String getOptionLabel() {
-        //return optionLabel;
-        return "";
+        return optionLabel;
     }
 
     public String getOptionId() {
-        //return optionId;
-        return "";
+        return optionId;
     }
 
 
