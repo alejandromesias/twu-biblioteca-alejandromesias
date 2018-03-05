@@ -12,4 +12,8 @@ public class ViewMainMenu {
         }
 
     }
+
+    public static void getAndDisplayUserChoice() {
+
+    }
 }

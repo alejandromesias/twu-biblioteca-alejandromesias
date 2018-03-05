@@ -4,7 +4,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.io.PrintStream;
 
 import static junit.framework.TestCase.assertEquals;
@@ -33,5 +35,20 @@ public class ViewMainMenuTest {
 
         ViewMainMenu.display();
         assertEquals(menuContent, printedOutput.toString());
+    }
+
+    @Test
+    public void shouldDisplayTheChosenOptionA() {
+
+        String mockInput = "a";
+        InputStream menuInput = new ByteArrayInputStream(mockInput.getBytes());
+        System.setIn(menuInput);
+
+        ViewMainMenu.getAndDisplayUserChoice();
+
+        String menuChoice = "List Books\n";
+        assertEquals(menuChoice, printedOutput.toString());
+
+        System.setIn(System.in);
     }
 }
