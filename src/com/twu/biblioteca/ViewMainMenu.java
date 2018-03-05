@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ViewMainMenu {
 
@@ -14,6 +15,9 @@ public class ViewMainMenu {
     }
 
     public static void getAndDisplayUserChoice() {
+        Scanner scan = new Scanner(System.in);
+        String userChoice = scan.next();
 
+        System.out.println("List Books");
     }
 }
