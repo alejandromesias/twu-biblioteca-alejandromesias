@@ -18,8 +18,7 @@ public class MainMenu {
 
         for (MenuOption option : options) {
             if(option.getOptionId().equals(selectedOption)){
-                //return option.getOptionLabel();
-                return "default";
+                return option.getOptionLabel();
             }
         }
 

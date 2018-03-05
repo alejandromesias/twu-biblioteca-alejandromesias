@@ -32,6 +32,6 @@ public class MainMenuTest {
         selectedOptionId = "b";
         gottenOptionLabel = MainMenu.retrieveOption(selectedOptionId);
 
-        //Assert.assertEquals("Second option", gottenOptionLabel);
+        Assert.assertEquals("Second option", gottenOptionLabel);
     }
 }
