@@ -5,6 +5,6 @@ public class ViewMainMenu {
     public static void display(){
         String[] menuOptions = MainMenu.getOptions();
 
-        System.out.println("");
+        System.out.println(menuOptions[0]);
     }
 }
