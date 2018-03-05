@@ -24,7 +24,7 @@ public class ViewMainMenuTest {
     }
 
     @Test
-    public void shouldDisplayTheWelcomeMessage() {
+    public void shouldDisplayTheMainMenu() {
 
         String row0 = "1. List Books\n";
         String row1 = "2. Second option\n";

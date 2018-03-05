@@ -9,7 +9,7 @@ public class ViewMainMenu {
 
         int optionIndex = 1;
         for (MenuOption option: menuOptions) {
-            System.out.println(optionIndex + ". " + option);
+            System.out.println(optionIndex + ". " + option.getOptionLabel());
         }
 
     }
