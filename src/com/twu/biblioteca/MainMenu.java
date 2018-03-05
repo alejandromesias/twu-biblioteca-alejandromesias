@@ -7,6 +7,20 @@ public class MainMenu {
 
     public static ArrayList<MenuOption> getOptions() {
 
+        ArrayList<MenuOption> options = buildOptions();
+
+        return options;
+    }
+
+    public static String retrieveOption(String selectedOption){
+
+        ArrayList<MenuOption> options = buildOptions();
+
+
+        return "List Books";
+    }
+
+    private static ArrayList<MenuOption> buildOptions() {
         ArrayList<MenuOption> options = new ArrayList<MenuOption>();
         MenuOption option0 = new MenuOption("List Books", "a");
         MenuOption option1 = new MenuOption("Second option", "b");
@@ -14,9 +28,5 @@ public class MainMenu {
         options.add(option1);
 
         return options;
-    }
-
-    public static String retrieveOption(String selectedOption){
-        return "";
     }
 }
