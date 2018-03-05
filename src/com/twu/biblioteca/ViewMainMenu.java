@@ -1,12 +1,14 @@
 package com.twu.biblioteca;
 
+import java.util.ArrayList;
+
 public class ViewMainMenu {
 
     public static void display(){
-        String[] menuOptions = MainMenu.getOptions();
+        ArrayList<MenuOption> menuOptions = MainMenu.getOptions();
 
         int optionIndex = 1;
-        for (String option: menuOptions) {
+        for (MenuOption option: menuOptions) {
             System.out.println(optionIndex + ". " + option);
         }
 

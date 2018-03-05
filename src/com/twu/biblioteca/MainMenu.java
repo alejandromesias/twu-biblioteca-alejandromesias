@@ -1,11 +1,16 @@
 package com.twu.biblioteca;
 
 
+import java.util.ArrayList;
+
 public class MainMenu {
 
-    private static String[] options = {"List Books"};
+    public static ArrayList<MenuOption> getOptions() {
 
-    public static String[] getOptions() {
+        ArrayList<MenuOption> options = new ArrayList<MenuOption>();
+        MenuOption option0 = new MenuOption("", "a");
+        options.add(option0);
+
         return options;
     }
 }

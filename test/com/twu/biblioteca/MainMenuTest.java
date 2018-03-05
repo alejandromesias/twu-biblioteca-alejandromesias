@@ -11,9 +11,9 @@ public class MainMenuTest {
     @Test
     public void shouldReturnMenuOptions() {
 
-        String[] menuOptions ;
+        ArrayList<MenuOption> menuOptions ;
 
         menuOptions = MainMenu.getOptions();
-        assertEquals("List Books", menuOptions[0]);
+        assertEquals("List Books", menuOptions.get(0).getOptionLabel());
     }
 }
