@@ -16,8 +16,14 @@ public class MainMenu {
 
         ArrayList<MenuOption> options = buildOptions();
 
+        for (MenuOption option : options) {
+            if(option.getOptionId().equals(selectedOption)){
+                //return option.getOptionLabel();
+                return "default";
+            }
+        }
 
-        return "List Books";
+        return "not found";
     }
 
     private static ArrayList<MenuOption> buildOptions() {
