@@ -7,5 +7,8 @@ public class FlowControl {
         if (code == "List Books"){
             ViewBookLister.display();
         }
+        else if(code == "Quit") {
+            //System.exit(0);
+        }
     }
 }

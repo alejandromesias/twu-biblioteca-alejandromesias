@@ -64,7 +64,7 @@ public class ViewMainMenuTest {
 
         ViewMainMenu.getAndDisplayUsersChoice();
 
-        String menuChoice = "Quits\n";
+        String menuChoice = "Quit\n";
 
         assertTrue(printedOutput.toString().contains(menuChoice));
 
