@@ -14,7 +14,7 @@ public class ViewMainMenu {
 
     }
 
-    public static void getAndDisplayUserChoice() {
+    public static void getAndDisplayUsersChoice() {
         Scanner scan = new Scanner(System.in);
         String userChoice = scan.next();
 
