@@ -27,17 +27,19 @@ public class ViewBookManagerTest {
     }
 
     @Test
-    public void shouldGetDataFromTheUserForLending() {
+    public void shouldGetDataFromTheUserForSuccessfulLending() {
 
-        String bookId = "3\nJohn Doe";
+        String bookId = "3\nDani";
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
         System.setIn(menuInput);
 
-        ViewBookManager.getDataForLending();
+        ViewBookManager.lendingDialog();
 
-        String feedback = "Data is: 3";
+        String expectedMessage = "Thank you!";
+        String expectedData = "3, Dani";
 
-        assertTrue(printedOutput.toString().contains(feedback));
+        assertTrue(printedOutput.toString().contains(expectedMessage));
+        assertTrue(printedOutput.toString().contains(expectedData));
 
         System.setIn(System.in);
     }
