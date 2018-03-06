@@ -23,6 +23,7 @@ public class ViewMainMenu {
             System.out.println("Select a valid option!");
         }else {
             System.out.println(optionLabel);
+            FlowControl.launch(optionLabel);
         }
     }
 }

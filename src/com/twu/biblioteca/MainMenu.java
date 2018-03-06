@@ -29,8 +29,10 @@ public class MainMenu {
         ArrayList<MenuOption> options = new ArrayList<MenuOption>();
         MenuOption option0 = new MenuOption("List Books", "a");
         MenuOption option1 = new MenuOption("Second option", "b");
+        MenuOption option2 = new MenuOption("Quit", "q");
         options.add(option0);
         options.add(option1);
+        options.add(option2);
 
         return options;
     }
