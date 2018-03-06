@@ -6,6 +6,9 @@ public class SingleBook {
     private String author;
     private int year;
 
+    private boolean isCheckedOut;
+    private String checkedOutByPerson;
+
     public SingleBook(int bookId, String name, String author, int year) {
         this.bookId = bookId;
         this.name = name;
@@ -30,4 +33,20 @@ public class SingleBook {
     }
 
 
+    public boolean getIsCheckedOut() {
+        return isCheckedOut;
+    }
+
+    public void setIsCheckedOut(boolean checkedOut) {
+        this.isCheckedOut = checkedOut;
+    }
+
+
+    public String getCheckedOutByPerson() {
+        return checkedOutByPerson;
+    }
+
+    public void setCheckedOutByPerson(String checkedOutByPerson) {
+        this.checkedOutByPerson = checkedOutByPerson;
+    }
 }
