@@ -43,4 +43,14 @@ public class SingleBookTest {
         assertEquals(true, aBook.getIsCheckedOut());
         assertEquals("Jane Doe", aBook.getCheckedOutByPerson());
     }
+
+    @Test
+    public void shouldChangeBooksCheckoutStateBack() {
+
+        aBook.setIsCheckedOut(false);
+        aBook.setCheckedOutByPerson(null);
+
+        assertEquals(false, aBook.getIsCheckedOut());
+        assertEquals(null, aBook.getCheckedOutByPerson());
+    }
 }
