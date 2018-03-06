@@ -14,7 +14,7 @@ public class ViewBookManager {
         System.out.println("Enter your Name");
         String personName = scan.next();
 
-        System.out.println("Data: " + parsedId + personName);
+        System.out.println("Data is: " + parsedId + personName);
 
         /*if (BookManager.lend(parsedId,personName)){
             System.out.println("Success");
