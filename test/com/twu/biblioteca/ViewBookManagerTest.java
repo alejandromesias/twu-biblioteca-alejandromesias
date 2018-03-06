@@ -47,14 +47,14 @@ public class ViewBookManagerTest {
     @Test
     public void shouldGetDataFromTheUserForFailedLending() {
 
-        String bookId = "3\nDani";
+        String bookId = "9\nDani";
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
         System.setIn(menuInput);
 
         ViewBookManager.lendingDialog();
 
         String expectedMessage = "not available";
-        String expectedData = "3, Dani";
+        String expectedData = "9, Dani";
 
         assertTrue(printedOutput.toString().contains(expectedMessage));
         assertTrue(printedOutput.toString().contains(expectedData));
