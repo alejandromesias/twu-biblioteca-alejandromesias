@@ -30,8 +30,17 @@ public class SingleBookTest {
     @Test
     public void shouldHaveBooksInitialCheckoutState() {
 
-        assertEquals(true, aBook.getIsCheckedOut());
-        assertEquals("PersonName", aBook.getCheckedOutByPerson());
+        assertEquals(false, aBook.getIsCheckedOut());
+        assertEquals(null, aBook.getCheckedOutByPerson());
+    }
 
+    @Test
+    public void shouldChangeBooksCheckoutState() {
+
+        aBook.setIsCheckedOut(true);
+        aBook.setCheckedOutByPerson("Person Name");
+
+        assertEquals(false, aBook.getIsCheckedOut());
+        assertEquals(null, aBook.getCheckedOutByPerson());
     }
 }
