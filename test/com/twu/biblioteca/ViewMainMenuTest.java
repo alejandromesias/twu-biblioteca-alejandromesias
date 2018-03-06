@@ -81,7 +81,7 @@ public class ViewMainMenuTest {
         ViewMainMenu.getAndDisplayUsersChoice();
 
         String menuChoice = "Select a valid option!\n";
-        assertEquals(menuChoice, printedOutput.toString());
+        assertTrue(printedOutput.toString().contains(menuChoice));
 
         System.setIn(System.in);
     }

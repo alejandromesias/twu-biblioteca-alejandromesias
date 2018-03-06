@@ -15,6 +15,9 @@ public class ViewMainMenu {
     }
 
     public static void getAndDisplayUsersChoice() {
+
+        System.out.println(MessagesBiblio.pickAMenuChoice());
+
         Scanner scan = new Scanner(System.in);
         String userChoice = scan.next();
 

@@ -5,4 +5,9 @@ public class MessagesBiblio {
         String WelcomeMessage = "Welcome to Biblioteca! Enjoy";
         return WelcomeMessage;
     }
+
+    public static String pickAMenuChoice(){
+        String menuMessage = "Please type the letter that marks your option!";
+        return menuMessage;
+    }
 }
