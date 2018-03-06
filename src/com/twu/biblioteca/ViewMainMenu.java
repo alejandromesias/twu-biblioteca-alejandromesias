@@ -19,7 +19,11 @@ public class ViewMainMenu {
         String userChoice = scan.next();
 
         String optionLabel = MainMenu.retrieveOption(userChoice);
-
-        System.out.println(optionLabel);
+        if (optionLabel == "not found") {
+            System.out.println("Select a valid option!");
+            
+        }else {
+            System.out.println(optionLabel);
+        }
     }
 }
