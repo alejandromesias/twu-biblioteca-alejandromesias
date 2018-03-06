@@ -21,7 +21,6 @@ public class ViewMainMenu {
         String optionLabel = MainMenu.retrieveOption(userChoice);
         if (optionLabel == "not found") {
             System.out.println("Select a valid option!");
-            
         }else {
             System.out.println(optionLabel);
         }
