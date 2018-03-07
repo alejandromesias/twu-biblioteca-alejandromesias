@@ -11,7 +11,7 @@ public class MessagesBiblio {
         return menuMessage;
     }
 
-    public static String enterInfoForCheckout(){
+    public static String enterIdForCheckout(){
         String menuMessage = "Enter the ID of the book to check out";
         return menuMessage;
     }

@@ -11,7 +11,7 @@ public class FlowControl {
             ViewBookManager.lendingDialog();
         }
         else if(code == "Quit") {
-            //System.exit(0);
+            BibliotecaApp.stopApp = true;
         }
     }
 }

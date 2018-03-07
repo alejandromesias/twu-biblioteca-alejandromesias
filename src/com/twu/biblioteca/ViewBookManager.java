@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class ViewBookManager {
 
     public static void lendingDialog(){
-        System.out.println(MessagesBiblio.enterInfoForCheckout());
-
         Scanner scan = new Scanner(System.in);
-        String requestedBookId = scan.next();
-        int parsedId = Integer.parseInt(requestedBookId);
 
         System.out.println("Enter your Name");
         String personName = scan.next();
+
+        System.out.println(MessagesBiblio.enterIdForCheckout());
+        String requestedBookId = scan.next();
+        int parsedId = Integer.parseInt(requestedBookId);
 
 
         if (BookManager.lend(parsedId,personName)){

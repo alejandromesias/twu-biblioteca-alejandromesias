@@ -9,7 +9,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
 
-import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
 public class ViewBookManagerTest {
@@ -29,7 +28,7 @@ public class ViewBookManagerTest {
     @Test
     public void shouldGetDataFromTheUserForSuccessfulLending() {
 
-        String bookId = "3\nDani";
+        String bookId = "Dani\n3";
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
         System.setIn(menuInput);
 
@@ -47,7 +46,7 @@ public class ViewBookManagerTest {
     @Test
     public void shouldGetDataFromTheUserForFailedLending() {
 
-        String bookId = "9\nDani";
+        String bookId = "Dani\n9";
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
         System.setIn(menuInput);
 

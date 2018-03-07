@@ -47,4 +47,11 @@ public class FlowControlTest {
 
         managerTest.shouldGetDataFromTheUserForSuccessfulLending();*/
     }
+
+    @Test
+    public void shouldQuitBibliotecaApp() {
+        FlowControl.launch("Quit");
+
+        assertTrue(BibliotecaApp.stopApp);
+    }
 }
