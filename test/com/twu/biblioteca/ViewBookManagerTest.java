@@ -15,9 +15,12 @@ public class ViewBookManagerTest {
 
     private final ByteArrayOutputStream printedOutput = new ByteArrayOutputStream();
 
+
+
     @Before
     public void captureStream() {
         System.setOut(new PrintStream(printedOutput));
+        BibliotecaStorage.initialize();
     }
 
     @After
@@ -54,6 +57,26 @@ public class ViewBookManagerTest {
 
         String expectedMessage = "not available";
         String expectedData = "9, Dani";
+
+        assertTrue(printedOutput.toString().contains(expectedMessage));
+        assertTrue(printedOutput.toString().contains(expectedData));
+
+        System.setIn(System.in);
+    }
+
+    @Test
+    public void shouldGetDataFromTheUserForSuccessfulRestoring() {
+
+        BookManager.lend(3,"Dani");
+
+        String bookId = "Dani\n3";
+        InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
+        System.setIn(menuInput);
+
+        ViewBookManager.restoringDialog();
+
+        String expectedMessage = "returning the book";
+        String expectedData = "3, Dani";
 
         assertTrue(printedOutput.toString().contains(expectedMessage));
         assertTrue(printedOutput.toString().contains(expectedData));
