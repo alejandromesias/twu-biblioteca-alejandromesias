@@ -23,6 +23,11 @@ public class BibliotecaStorage {
     }
 
     public static void updateBook(SingleBook alteredBook){
-
+        for (SingleBook book : bookCollection) {
+            if(book.getBookId() == alteredBook.getBookId()){
+                int foundIndex = bookCollection.indexOf(book);
+                bookCollection.set(foundIndex,alteredBook);
+            }
+        }
     }
 }
