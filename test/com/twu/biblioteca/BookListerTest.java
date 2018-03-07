@@ -55,7 +55,8 @@ public class BookListerTest {
         booksList = BookLister.getAvailableBooks();
 
         assertEquals("mockBook0", booksList.get(0).getName());
-        assertEquals("mockBook2", booksList.get(1).getName());
+        assertEquals("mockBook1", booksList.get(1).getName());
+        assertEquals("mockBook2", booksList.get(2).getName());
 
     }
 }
