@@ -31,9 +31,10 @@ public class ViewMainMenuTest {
         String title = "** MENU **\n";
         String row0 = "a. List Books\n";
         String row1 = "b. Check out book\n";
-        String row2 = "q. Quit\n";
+        String row2 = "c. Return book\n";
+        String row3 = "q. Quit\n";
 
-        String menuContent = title + row0 + row1 +row2;
+        String menuContent = title + row0 + row1 + row2 + row3;
 
         ViewMainMenu.display();
         assertEquals(menuContent, printedOutput.toString());
