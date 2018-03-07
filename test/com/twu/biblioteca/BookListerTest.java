@@ -26,7 +26,7 @@ public class BookListerTest {
     }
 
     @Test
-    public void ShouldReturnAListOfAllAvailableBooks() {
+    public void ShouldReturnAListOfAvailableBooks() {
         ArrayList<SingleBook> booksList;
 
         int lendingTestId = 3;
