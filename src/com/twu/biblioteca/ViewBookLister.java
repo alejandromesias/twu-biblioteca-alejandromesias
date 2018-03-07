@@ -11,10 +11,11 @@ public class ViewBookLister {
         //booksList = BookLister.getAllBooks();
         booksList = BookLister.getAvailableBooks();
 
-        String threeColumnsFormat = "%-15s%-15s%-5s%n";
+        String fourColumnsFormat = "%-5s%-15s%-15s%-5s%n";
 
         for (SingleBook book : booksList) {
-            System.out.format(threeColumnsFormat,
+            System.out.format(fourColumnsFormat,
+                    book.getBookId(),
                     book.getName(),
                     book.getAuthor(),
                     book.getYear());
