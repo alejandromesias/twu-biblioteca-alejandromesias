@@ -7,6 +7,9 @@ public class FlowControl {
         if (code == "List Books"){
             ViewBookLister.display();
         }
+        else if(code == "Check out book"){
+            ViewBookManager.lendingDialog();
+        }
         else if(code == "Quit") {
             //System.exit(0);
         }

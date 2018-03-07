@@ -10,4 +10,11 @@ public class MessagesBiblio {
         String menuMessage = "Please type the letter that marks your option!";
         return menuMessage;
     }
+
+    public static String enterInfoForCheckout(){
+        String menuMessage = "Enter the ID of the book to check out";
+        return menuMessage;
+    }
+
+
 }

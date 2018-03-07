@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ViewBookManager {
 
     public static void lendingDialog(){
-        System.out.println("Enter the ID of the book to check out");
+        System.out.println(MessagesBiblio.enterInfoForCheckout());
 
         Scanner scan = new Scanner(System.in);
         String requestedBookId = scan.next();

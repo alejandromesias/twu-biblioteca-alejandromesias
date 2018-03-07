@@ -8,6 +8,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertTrue;
 
 public class FlowControlTest {
 
@@ -32,5 +33,14 @@ public class FlowControlTest {
         String row2 = "mockBook2      author2        2002 \n";
         String listContent = row0 + row1 + row2;
         assertEquals(listContent, printedOutput.toString());
+    }
+
+    @Test
+    public void shouldLaunchTheViewBookManager() {
+        /*FlowControl.launch("Check out book");
+
+        ViewBookManagerTest managerTest = new ViewBookManagerTest();
+
+        managerTest.shouldGetDataFromTheUserForSuccessfulLending();*/
     }
 }
