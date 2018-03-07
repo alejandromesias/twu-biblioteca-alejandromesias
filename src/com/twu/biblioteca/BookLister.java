@@ -15,15 +15,19 @@ public class BookLister {
     }
 
     public static ArrayList<SingleBook> getAvailableBooks() {
+
+        ArrayList<SingleBook> allBooksList = getAllBooks();
         ArrayList<SingleBook> availableBooksList = new ArrayList<SingleBook>();
 
-        //TODO: replace hardcoded
-        SingleBook book0 = new SingleBook(2,"mockBook0", "author0", 2000);
-        SingleBook book2 = new SingleBook(4,"mockBook2", "author2", 2002);
-        availableBooksList.add(book0);
-        availableBooksList.add(book2);
+        for ( SingleBook book: allBooksList ) {
+            if(!book.getIsCheckedOut()){
+                availableBooksList.add(book);
+            }
+        }
 
-        return availableBooksList;
+
+        //return availableBooksList;
+        return allBooksList;
 
     }
 }

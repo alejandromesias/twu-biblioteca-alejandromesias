@@ -19,7 +19,7 @@ public class BookManagerTest {
     }
 
     @Test
-    public void shouldUpdateABookWhenLending() {
+    public void shouldUpdateABibliotecaStorageWhenLending() {
         BibliotecaStorage.initialize();
 
         ArrayList<SingleBook> fakeBooks = BibliotecaStorage.getBookCollection();
