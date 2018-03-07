@@ -21,4 +21,8 @@ public class BibliotecaStorage {
     public static ArrayList<SingleBook> getBookCollection(){
         return bookCollection;
     }
+
+    public static void updateBook(SingleBook alteredBook){
+
+    }
 }
