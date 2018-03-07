@@ -28,12 +28,12 @@ public class ViewMainMenuTest {
 
     @Test
     public void shouldDisplayTheMainMenu() {
-
+        String title = "** MENU **\n";
         String row0 = "a. List Books\n";
-        String row1 = "b. Second option\n";
+        String row1 = "b. Check out book\n";
         String row2 = "q. Quit\n";
 
-        String menuContent = row0 + row1 +row2;
+        String menuContent = title + row0 + row1 +row2;
 
         ViewMainMenu.display();
         assertEquals(menuContent, printedOutput.toString());

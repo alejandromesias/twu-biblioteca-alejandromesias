@@ -17,7 +17,7 @@ public class MainMenuTest {
         menuOptions = MainMenu.getOptions();
         assertEquals("List Books", menuOptions.get(0).getOptionLabel());
         assertEquals("a", menuOptions.get(0).getOptionId());
-        assertEquals("Second option", menuOptions.get(1).getOptionLabel());
+        assertEquals("Check out book", menuOptions.get(1).getOptionLabel());
         assertEquals("b", menuOptions.get(1).getOptionId());
     }
 
@@ -32,6 +32,6 @@ public class MainMenuTest {
         selectedOptionId = "b";
         gottenOptionLabel = MainMenu.retrieveOption(selectedOptionId);
 
-        Assert.assertEquals("Second option", gottenOptionLabel);
+        Assert.assertEquals("Check out book", gottenOptionLabel);
     }
 }

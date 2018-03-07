@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class ViewMainMenu {
 
     public static void display(){
+        System.out.println("** MENU **");
+
         ArrayList<MenuOption> menuOptions = MainMenu.getOptions();
 
         for (MenuOption option: menuOptions) {
