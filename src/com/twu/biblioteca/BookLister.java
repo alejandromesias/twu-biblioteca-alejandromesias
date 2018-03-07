@@ -13,4 +13,10 @@ public class BookLister {
         allBooks = BibliotecaStorage.getBookCollection();
         return allBooks;
     }
+
+    public static ArrayList<SingleBook> getAvailableBooks() {
+        ArrayList<SingleBook> availableBooksList = new ArrayList<SingleBook>();
+
+        return availableBooksList;
+    }
 }
