@@ -15,8 +15,6 @@ public class ViewBookManagerTest {
 
     private final ByteArrayOutputStream printedOutput = new ByteArrayOutputStream();
 
-
-
     @Before
     public void captureStream() {
         System.setOut(new PrintStream(printedOutput));
@@ -37,7 +35,7 @@ public class ViewBookManagerTest {
 
         ViewBookManager.lendingDialog();
 
-        String expectedMessage = "Thank you!";
+        String expectedMessage = "Enjoy the book";
         String expectedData = "3, Dani";
 
         assertTrue(printedOutput.toString().contains(expectedMessage));
@@ -77,6 +75,26 @@ public class ViewBookManagerTest {
 
         String expectedMessage = "returning the book";
         String expectedData = "3, Dani";
+
+        assertTrue(printedOutput.toString().contains(expectedMessage));
+        assertTrue(printedOutput.toString().contains(expectedData));
+
+        System.setIn(System.in);
+    }
+
+    @Test
+    public void shouldGetDataFromTheUserForFailedRestoring() {
+
+        BookManager.lend(3,"Dani");
+
+        String bookId = "Mani\n3";
+        InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
+        System.setIn(menuInput);
+
+        ViewBookManager.restoringDialog();
+
+        String expectedMessage = "not a valid book";
+        String expectedData = "3, Mani";
 
         assertTrue(printedOutput.toString().contains(expectedMessage));
         assertTrue(printedOutput.toString().contains(expectedData));

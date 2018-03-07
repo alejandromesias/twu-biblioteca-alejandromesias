@@ -16,7 +16,7 @@ public class ViewBookManager {
 
 
         if (BookManager.lend(parsedId,personName)){
-            System.out.println("Thank you! Enjoy The book: " + parsedId + ", " + personName);
+            System.out.println("Thank you! Enjoy the book: " + parsedId + ", " + personName);
         }
         else{
             System.out.println("That book is not available: " + parsedId + ", " + personName);
