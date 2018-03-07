@@ -25,9 +25,6 @@ public class BookLister {
             }
         }
 
-
-        //return availableBooksList;
-        return allBooksList;
-
+        return availableBooksList;
     }
 }
