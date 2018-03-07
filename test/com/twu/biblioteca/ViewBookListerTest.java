@@ -26,10 +26,11 @@ public class ViewBookListerTest {
     @Test
     public void shouldDisplayTheBookList() {
 
-        String row0 = "2    mockBook0      author0        2000 \n";
-        String row1 = "3    mockBook1      author1        2001 \n";
-        String row2 = "4    mockBook2      author2        2002 \n";
-        String listContent = row0 + row1 + row2;
+        String header = "ID   Book Name      Author         Year \n";
+        String row0   = "2    mockBook0      author0        2000 \n";
+        String row1   = "3    mockBook1      author1        2001 \n";
+        String row2   = "4    mockBook2      author2        2002 \n";
+        String listContent = header + row0 + row1 + row2;
 
         BibliotecaStorage.initialize();
 
