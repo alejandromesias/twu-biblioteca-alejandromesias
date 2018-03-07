@@ -38,7 +38,7 @@ public class ViewBookManager {
             System.out.println("Thank you for returning the book: " + parsedId + ", " + personName);
         }
         else{
-            System.out.println("That is not a valid book return" + parsedId + ", " + personName);
+            System.out.println("That is not a valid book return! " + parsedId + ", " + personName);
         }
     }
 

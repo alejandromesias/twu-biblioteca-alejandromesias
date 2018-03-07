@@ -8,7 +8,6 @@ public class ViewBookLister {
 
         ArrayList<SingleBook> booksList;
 
-        //booksList = BookLister.getAllBooks();
         booksList = BookLister.getAvailableBooks();
 
         String fourColumnsFormat = "%-5s%-15s%-15s%-5s%n";
