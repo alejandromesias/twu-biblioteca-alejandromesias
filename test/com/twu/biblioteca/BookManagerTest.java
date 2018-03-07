@@ -33,6 +33,7 @@ public class BookManagerTest {
 
         ArrayList<SingleBook> newFakeBooks = BibliotecaStorage.getBookCollection();
 
-        assertFalse(newFakeBooks.get(1).getIsCheckedOut());
+        assertTrue(newFakeBooks.get(1).getIsCheckedOut());
+        assertEquals(TestName, newFakeBooks.get(1).getCheckedOutByPerson());
     }
 }
