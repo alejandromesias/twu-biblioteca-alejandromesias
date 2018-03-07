@@ -25,12 +25,14 @@ public class BookManager {
         ArrayList<SingleBook> allBooks = BookLister.getAllBooks();
 
         for (SingleBook book : allBooks){
-            if (book.getBookId() == requestedBookId && book.getCheckedOutByPerson().equals(personName)) {
-                SingleBook foundBook = book;
-                foundBook.setCheckedOutByPerson(null);
-                foundBook.setIsCheckedOut(false);
-                BibliotecaStorage.updateBook(foundBook);
-                return !foundBook.getIsCheckedOut();
+            if (book.getCheckedOutByPerson() != null) {
+                if (book.getBookId() == requestedBookId && book.getCheckedOutByPerson().equals(personName)) {
+                    SingleBook foundBook = book;
+                    foundBook.setCheckedOutByPerson(null);
+                    foundBook.setIsCheckedOut(false);
+                    BibliotecaStorage.updateBook(foundBook);
+                    return !foundBook.getIsCheckedOut();
+                }
             }
         }
 

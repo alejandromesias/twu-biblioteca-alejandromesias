@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 public class BookManagerTest {
     @Before
@@ -49,5 +50,23 @@ public class BookManagerTest {
 
         Boolean wasRestored = BookManager.restore(requestedBookId,personName);
         assertTrue(wasRestored);
+    }
+
+    @Test
+    public void shouldnotRestoreAnInexistingBook() {
+        int requestedBookId = 8;
+        String personName = "Jane Doe";
+
+        Boolean wasRestored = BookManager.restore(requestedBookId,personName);
+        assertFalse(wasRestored);
+    }
+
+    @Test
+    public void shouldnotRestoreAnAvailableBook() {
+        int requestedBookId = 3;
+        String personName = "Jane Doe";
+
+        Boolean wasRestored = BookManager.restore(requestedBookId,personName);
+        assertFalse(wasRestored);
     }
 }

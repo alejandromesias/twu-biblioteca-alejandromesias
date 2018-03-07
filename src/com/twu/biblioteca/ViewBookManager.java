@@ -29,7 +29,7 @@ public class ViewBookManager {
         System.out.println("Enter your Name");
         String personName = scan.next();
 
-        System.out.println(MessagesBiblio.enterIdForCheckout());
+        System.out.println("Enter the ID of the book you are returning");
         String requestedBookId = scan.next();
         int parsedId = Integer.parseInt(requestedBookId);
 

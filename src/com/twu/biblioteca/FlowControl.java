@@ -10,6 +10,9 @@ public class FlowControl {
         else if(code == "Check out book"){
             ViewBookManager.lendingDialog();
         }
+        else if(code == "Return book"){
+            ViewBookManager.restoringDialog();
+        }
         else if(code == "Quit") {
             BibliotecaApp.stopApp = true;
         }
