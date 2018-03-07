@@ -13,6 +13,7 @@ public class BookManager {
 
                 foundBook.setCheckedOutByPerson(personName);
                 foundBook.setIsCheckedOut(true);
+                BibliotecaStorage.updateBook(foundBook);
                 return foundBook.getIsCheckedOut();
             }
         }
