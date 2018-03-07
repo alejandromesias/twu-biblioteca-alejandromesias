@@ -14,8 +14,8 @@ public class BookManagerTest {
         int requestedBookId = 3;
         String personName = "Jane Doe";
 
-        Boolean wasLend = BookManager.lend(requestedBookId,personName);
-        assertTrue(wasLend);
+        Boolean wasLent = BookManager.lend(requestedBookId,personName);
+        assertTrue(wasLent);
     }
 
     @Test
@@ -35,5 +35,17 @@ public class BookManagerTest {
 
         assertTrue(newFakeBooks.get(1).getIsCheckedOut());
         assertEquals(TestName, newFakeBooks.get(1).getCheckedOutByPerson());
+    }
+
+    @Test
+    public void shouldLendThenRestoreABookById() {
+        int requestedBookId = 3;
+        String personName = "Jane Doe";
+
+        Boolean wasLent = BookManager.lend(requestedBookId,personName);
+        assertTrue(wasLent);
+
+        Boolean wasRestored = BookManager.restore(requestedBookId);
+        assertTrue(wasRestored);
     }
 }

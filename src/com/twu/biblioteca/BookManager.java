@@ -20,4 +20,8 @@ public class BookManager {
 
         return false;
     }
+
+    public static Boolean restore(int requestedBookId) {
+        return false;
+    }
 }
