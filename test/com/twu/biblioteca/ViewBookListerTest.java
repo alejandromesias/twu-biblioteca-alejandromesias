@@ -31,6 +31,8 @@ public class ViewBookListerTest {
         String row2 = "mockBook2      author2        2002 \n";
         String listContent = row0 + row1 + row2;
 
+        BibliotecaStorage.initialize();
+
         ViewBookLister.display();
         assertEquals(listContent, printedOutput.toString());
     }

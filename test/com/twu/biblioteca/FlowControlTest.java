@@ -26,6 +26,8 @@ public class FlowControlTest {
 
     @Test
     public void shouldLaunchTheViewBookLister() {
+        BibliotecaStorage.initialize();
+
         FlowControl.launch("List Books");
 
         String row0 = "mockBook0      author0        2000 \n";
