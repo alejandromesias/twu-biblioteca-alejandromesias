@@ -16,8 +16,8 @@ public class BibliotecaStorageTest {
 
         fakeBooks = BibliotecaStorage.getBookCollection();
 
-        assertEquals("mockBook0a", fakeBooks.get(0).getName());
-        assertEquals("mockBook1a", fakeBooks.get(1).getName());
-        assertEquals("mockBook2a", fakeBooks.get(2).getName());
+        assertEquals("mockBook0", fakeBooks.get(0).getName());
+        assertEquals("mockBook1", fakeBooks.get(1).getName());
+        assertEquals("mockBook2", fakeBooks.get(2).getName());
     }
 }
