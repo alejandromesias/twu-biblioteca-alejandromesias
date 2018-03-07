@@ -37,4 +37,5 @@ public class ViewBookListerTest {
         ViewBookLister.display();
         assertEquals(listContent, printedOutput.toString());
     }
+
 }
