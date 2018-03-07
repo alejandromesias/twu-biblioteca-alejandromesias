@@ -35,7 +35,7 @@ public class ViewBookManager {
 
 
         if (BookManager.restore(parsedId,personName)){
-            System.out.println("Thank you for returning book: " + parsedId + ", " + personName);
+            System.out.println("Thank you for returning the book: " + parsedId + ", " + personName);
         }
         else{
             System.out.println("That is not a valid book return" + parsedId + ", " + personName);
