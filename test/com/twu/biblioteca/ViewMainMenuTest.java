@@ -28,6 +28,8 @@ public class ViewMainMenuTest {
 
     @Test
     public void shouldDisplayTheMainMenu() {
+        ViewMainMenu viewMainMenu = new ViewMainMenu();
+
         String title = "** MENU **\n";
         String row0 = "a. List Books\n";
         String row1 = "b. Check out book\n";
@@ -36,18 +38,19 @@ public class ViewMainMenuTest {
 
         String menuContent = title + row0 + row1 + row2 + row3;
 
-        ViewMainMenu.display();
+        viewMainMenu.display();
         assertEquals(menuContent, printedOutput.toString());
     }
 
     @Test
     public void shouldDisplayTheChosenOptionA() {
+        ViewMainMenu viewMainMenu = new ViewMainMenu();
 
         String mockInput = "a";
         InputStream menuInput = new ByteArrayInputStream(mockInput.getBytes());
         System.setIn(menuInput);
 
-        ViewMainMenu.getAndDisplayUsersChoice();
+        viewMainMenu.getAndDisplayUsersChoice();
 
         String menuChoice = "List Books\n";
 
@@ -58,12 +61,13 @@ public class ViewMainMenuTest {
 
     @Test
     public void shouldDisplayTheChosenOptionQ() {
+        ViewMainMenu viewMainMenu = new ViewMainMenu();
 
         String mockInput = "q";
         InputStream menuInput = new ByteArrayInputStream(mockInput.getBytes());
         System.setIn(menuInput);
 
-        ViewMainMenu.getAndDisplayUsersChoice();
+        viewMainMenu.getAndDisplayUsersChoice();
 
         String menuChoice = "Quit\n";
 
@@ -74,12 +78,13 @@ public class ViewMainMenuTest {
 
     @Test
     public void shouldDisplayInvalidMenuOption() {
+        ViewMainMenu viewMainMenu = new ViewMainMenu();
 
         String mockInput = "p";
         InputStream menuInput = new ByteArrayInputStream(mockInput.getBytes());
         System.setIn(menuInput);
 
-        ViewMainMenu.getAndDisplayUsersChoice();
+        viewMainMenu.getAndDisplayUsersChoice();
 
         String menuChoice = "Select a valid option!\n";
         assertTrue(printedOutput.toString().contains(menuChoice));

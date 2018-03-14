@@ -10,6 +10,8 @@ import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;
 
 public class BookManagerTest {
+    BookManager bookManager = new BookManager();
+
     @Before
     public void refreshStorage() {
         BibliotecaStorage.initialize();
@@ -20,7 +22,7 @@ public class BookManagerTest {
         int requestedBookId = 3;
         String personName = "Jane Doe";
 
-        Boolean wasLent = BookManager.lend(requestedBookId,personName);
+        Boolean wasLent = bookManager.lend(requestedBookId,personName);
         assertTrue(wasLent);
     }
 
@@ -30,7 +32,7 @@ public class BookManagerTest {
         int testId = 3;
         String TestName = "Test Person";
 
-        BookManager.lend(testId, TestName);
+        bookManager.lend(testId, TestName);
 
         ArrayList<SingleBook> newFakeBooks = BibliotecaStorage.getBookCollection();
 
@@ -45,10 +47,10 @@ public class BookManagerTest {
         int requestedBookId = 3;
         String personName = "Jane Doe";
 
-        Boolean wasLent = BookManager.lend(requestedBookId,personName);
+        Boolean wasLent = bookManager.lend(requestedBookId,personName);
         assertTrue(wasLent);
 
-        Boolean wasRestored = BookManager.restore(requestedBookId,personName);
+        Boolean wasRestored = bookManager.restore(requestedBookId,personName);
         assertTrue(wasRestored);
     }
 
@@ -57,7 +59,7 @@ public class BookManagerTest {
         int requestedBookId = 8;
         String personName = "Jane Doe";
 
-        Boolean wasRestored = BookManager.restore(requestedBookId,personName);
+        Boolean wasRestored = bookManager.restore(requestedBookId,personName);
         assertFalse(wasRestored);
     }
 
@@ -66,7 +68,7 @@ public class BookManagerTest {
         int requestedBookId = 3;
         String personName = "Jane Doe";
 
-        Boolean wasRestored = BookManager.restore(requestedBookId,personName);
+        Boolean wasRestored = bookManager.restore(requestedBookId,personName);
         assertFalse(wasRestored);
     }
 }

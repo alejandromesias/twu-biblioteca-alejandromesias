@@ -5,14 +5,11 @@ import java.util.Scanner;
 
 public class ViewMainMenu {
 
-    public ViewMainMenu(){
-
-    }
-
-    public static void display(){
+    public void display(){
         System.out.println("** MENU **");
 
-        ArrayList<MenuOption> menuOptions = MainMenu.getOptions();
+        MainMenu mainMenu = new MainMenu();
+        ArrayList<MenuOption> menuOptions = mainMenu.getOptions();
 
         for (MenuOption option: menuOptions) {
             System.out.println(option.getOptionId() + ". " + option.getOptionLabel());
@@ -20,19 +17,20 @@ public class ViewMainMenu {
 
     }
 
-    public static void getAndDisplayUsersChoice() {
-
+    public void getAndDisplayUsersChoice() {
+        MainMenu mainMenu = new MainMenu();
+        FlowControl flowControl = new FlowControl();
         System.out.println(MessagesBiblio.pickAMenuChoice());
 
         Scanner scan = new Scanner(System.in);
         String userChoice = scan.next();
 
-        String optionLabel = MainMenu.retrieveOption(userChoice);
+        String optionLabel = mainMenu.retrieveOption(userChoice);
         if (optionLabel.equals("not found")) {
             System.out.println("Select a valid option!");
         }else {
             System.out.println(optionLabel);
-            FlowControl.launch(optionLabel);
+            flowControl.launch(optionLabel);
         }
     }
 }

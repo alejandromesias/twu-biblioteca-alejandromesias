@@ -5,14 +5,14 @@ import java.util.ArrayList;
 
 public class MainMenu {
 
-    public static ArrayList<MenuOption> getOptions() {
+    public ArrayList<MenuOption> getOptions() {
 
         ArrayList<MenuOption> options = buildOptions();
 
         return options;
     }
 
-    public static String retrieveOption(String selectedOption){
+    public String retrieveOption(String selectedOption){
 
         ArrayList<MenuOption> options = buildOptions();
 
@@ -25,7 +25,7 @@ public class MainMenu {
         return "not found";
     }
 
-    private static ArrayList<MenuOption> buildOptions() {
+    private ArrayList<MenuOption> buildOptions() {
         ArrayList<MenuOption> options = new ArrayList<MenuOption>();
         MenuOption option0 = new MenuOption("List Books", "a");
         MenuOption option1 = new MenuOption("Check out book", "b");

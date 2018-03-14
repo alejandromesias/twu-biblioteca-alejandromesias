@@ -6,14 +6,16 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
 
+        ViewMainMenu viewMainMenu = new ViewMainMenu();
+
         ViewMessagesBiblio.welcome();
 
         while(!stopApp) {
             System.out.println("--------------");
 
-            ViewMainMenu.display();
+            viewMainMenu.display();
 
-            ViewMainMenu.getAndDisplayUsersChoice();
+            viewMainMenu.getAndDisplayUsersChoice();
         }
     }
 

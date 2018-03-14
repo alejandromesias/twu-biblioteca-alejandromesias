@@ -26,9 +26,11 @@ public class FlowControlTest {
 
     @Test
     public void shouldLaunchTheViewBookLister() {
+        FlowControl flowControl = new FlowControl();
+
         BibliotecaStorage.initialize();
 
-        FlowControl.launch("List Books");
+        flowControl.launch("List Books");
 
         String header = "ID   Book Name      Author         Year \n";
         String row0   = "2    mockBook0      author0        2000 \n";
@@ -50,7 +52,9 @@ public class FlowControlTest {
 
     @Test
     public void shouldQuitBibliotecaApp() {
-        FlowControl.launch("Quit");
+        FlowControl flowControl = new FlowControl();
+
+        flowControl.launch("Quit");
 
         assertTrue(BibliotecaApp.stopApp);
     }

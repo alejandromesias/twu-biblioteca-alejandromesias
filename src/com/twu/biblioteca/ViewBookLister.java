@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ViewBookLister {
 
-    public static void display(){
+    public void display(){
         BookLister bookLister = new BookLister();
         ArrayList<SingleBook> booksList;
 

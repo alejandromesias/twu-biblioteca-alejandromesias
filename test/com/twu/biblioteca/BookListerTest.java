@@ -8,6 +8,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 
 public class BookListerTest {
+    BookManager bookManager = new BookManager();
 
     @Before
     public void captureStream() {
@@ -33,7 +34,7 @@ public class BookListerTest {
         int lendingTestId = 3;
         String lendingTestName = "Test Person";
 
-        BookManager.lend(lendingTestId,lendingTestName);
+        bookManager.lend(lendingTestId,lendingTestName);
 
         booksList = bookLister.getAvailableBooks();
 
@@ -50,9 +51,9 @@ public class BookListerTest {
         int lendingTestId = 3;
         String lendingTestName = "Test Person";
 
-        BookManager.lend(lendingTestId,lendingTestName);
+        bookManager.lend(lendingTestId,lendingTestName);
 
-        BookManager.restore(lendingTestId,lendingTestName);
+        bookManager.restore(lendingTestId,lendingTestName);
 
         booksList = bookLister.getAvailableBooks();
 

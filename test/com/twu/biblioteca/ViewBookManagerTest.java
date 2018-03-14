@@ -14,6 +14,7 @@ import static junit.framework.TestCase.assertTrue;
 public class ViewBookManagerTest {
 
     private final ByteArrayOutputStream printedOutput = new ByteArrayOutputStream();
+    BookManager bookManager = new BookManager();
 
     @Before
     public void captureStream() {
@@ -65,7 +66,7 @@ public class ViewBookManagerTest {
     @Test
     public void shouldGetDataFromTheUserForSuccessfulRestoring() {
 
-        BookManager.lend(3,"Dani");
+        bookManager.lend(3,"Dani");
 
         String bookId = "Dani\n3";
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
@@ -85,7 +86,7 @@ public class ViewBookManagerTest {
     @Test
     public void shouldGetDataFromTheUserForFailedRestoring() {
 
-        BookManager.lend(3,"Dani");
+        bookManager.lend(3,"Dani");
 
         String bookId = "Mani\n3";
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());

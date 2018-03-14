@@ -6,6 +6,7 @@ public class ViewBookManager {
 
     public static void lendingDialog(){
         Scanner scan = new Scanner(System.in);
+        BookManager bookManager = new BookManager();
 
         System.out.println("Enter your Name");
         String personName = scan.next();
@@ -14,7 +15,7 @@ public class ViewBookManager {
         String requestedBookId = scan.next();
         int parsedId = Integer.parseInt(requestedBookId);
 
-        boolean bookWasLent = BookManager.lend(parsedId,personName);
+        boolean bookWasLent = bookManager.lend(parsedId,personName);
 
         if (bookWasLent){
             System.out.println("Thank you! Enjoy the book: " + parsedId + ", " + personName);
@@ -25,6 +26,7 @@ public class ViewBookManager {
 
     public static void restoringDialog(){
         Scanner scan = new Scanner(System.in);
+        BookManager bookManager = new BookManager();
 
         System.out.println("Enter your Name");
         String personName = scan.next();
@@ -34,7 +36,7 @@ public class ViewBookManager {
         int parsedId = Integer.parseInt(requestedBookId);
 
 
-        if (BookManager.restore(parsedId,personName)){
+        if (bookManager.restore(parsedId,personName)){
             System.out.println("Thank you for returning the book: " + parsedId + ", " + personName);
         }
         else{

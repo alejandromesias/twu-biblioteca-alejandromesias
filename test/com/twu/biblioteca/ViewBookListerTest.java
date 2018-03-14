@@ -25,6 +25,7 @@ public class ViewBookListerTest {
 
     @Test
     public void shouldDisplayTheBookList() {
+        ViewBookLister viewBookLister = new ViewBookLister();
 
         String header = "ID   Book Name      Author         Year \n";
         String row0   = "2    mockBook0      author0        2000 \n";
@@ -34,7 +35,7 @@ public class ViewBookListerTest {
 
         BibliotecaStorage.initialize();
 
-        ViewBookLister.display();
+        viewBookLister.display();
         assertEquals(listContent, printedOutput.toString());
     }
 
