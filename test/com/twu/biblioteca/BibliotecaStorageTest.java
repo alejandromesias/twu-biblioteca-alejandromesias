@@ -31,11 +31,11 @@ public class BibliotecaStorageTest {
     public void shouldUpdateABook() {
         assertEquals(2001, fakeBooks.get(1).getYear());
 
+        ArrayList<SingleBook> newFakeBooks = BibliotecaStorage.getBookCollection();
+
         SingleBook alteredBook = new SingleBook(3,"mockBook1", "author1", 2011);
 
         BibliotecaStorage.updateBook(alteredBook);
-
-        ArrayList<SingleBook> newFakeBooks = BibliotecaStorage.getBookCollection();
 
         assertEquals(2011, newFakeBooks.get(1).getYear());
     }

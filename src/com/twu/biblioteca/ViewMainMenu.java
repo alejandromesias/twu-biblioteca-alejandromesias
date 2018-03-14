@@ -5,6 +5,10 @@ import java.util.Scanner;
 
 public class ViewMainMenu {
 
+    public ViewMainMenu(){
+
+    }
+
     public static void display(){
         System.out.println("** MENU **");
 
@@ -24,7 +28,7 @@ public class ViewMainMenu {
         String userChoice = scan.next();
 
         String optionLabel = MainMenu.retrieveOption(userChoice);
-        if (optionLabel == "not found") {
+        if (optionLabel.equals("not found")) {
             System.out.println("Select a valid option!");
         }else {
             System.out.println(optionLabel);

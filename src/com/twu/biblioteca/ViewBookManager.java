@@ -14,11 +14,11 @@ public class ViewBookManager {
         String requestedBookId = scan.next();
         int parsedId = Integer.parseInt(requestedBookId);
 
+        boolean bookWasLent = BookManager.lend(parsedId,personName);
 
-        if (BookManager.lend(parsedId,personName)){
+        if (bookWasLent){
             System.out.println("Thank you! Enjoy the book: " + parsedId + ", " + personName);
-        }
-        else{
+        }else{
             System.out.println("That book is not available: " + parsedId + ", " + personName);
         }
     }

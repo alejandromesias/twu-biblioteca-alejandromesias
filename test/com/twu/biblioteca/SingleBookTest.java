@@ -10,10 +10,10 @@ import static org.junit.Assert.assertEquals;
 
 public class SingleBookTest {
 
-    SingleBook aBook = null;
+    private SingleBook aBook;
 
     @Before
-    public void createAFakeBook() {
+    public void setUp() {
         aBook = new SingleBook(999,"testName", "testAuthor", 2000);
 
     }
