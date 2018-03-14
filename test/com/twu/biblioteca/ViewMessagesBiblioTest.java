@@ -13,6 +13,7 @@ public class ViewMessagesBiblioTest {
 
     private final ByteArrayOutputStream printedOutput = new ByteArrayOutputStream();
     ViewMessagesBiblio viewMessagesBiblio = new ViewMessagesBiblio();
+    MessagesBiblio messages = new MessagesBiblio();
 
     @Before
     public void captureStream() {
@@ -26,7 +27,7 @@ public class ViewMessagesBiblioTest {
 
     @Test
     public void shouldDisplayTheWelcomeMessage() {
-        String wellcomeMessage = MessagesBiblio.welcome()+"\n";
+        String wellcomeMessage = messages.welcome()+"\n";
         viewMessagesBiblio.welcome();
         assertEquals(wellcomeMessage, printedOutput.toString());
     }

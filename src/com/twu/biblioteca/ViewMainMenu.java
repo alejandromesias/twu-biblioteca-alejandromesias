@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ViewMainMenu {
+    MessagesBiblio messages = new MessagesBiblio();
 
     public void display(){
         System.out.println("** MENU **");
@@ -20,7 +21,7 @@ public class ViewMainMenu {
     public void getAndDisplayUsersChoice() {
         MainMenu mainMenu = new MainMenu();
         FlowControl flowControl = new FlowControl();
-        System.out.println(MessagesBiblio.pickAMenuChoice());
+        System.out.println(messages.pickAMenuChoice());
 
         Scanner scan = new Scanner(System.in);
         String userChoice = scan.next();

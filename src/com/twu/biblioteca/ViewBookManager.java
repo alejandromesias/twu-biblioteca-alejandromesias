@@ -3,6 +3,7 @@ package com.twu.biblioteca;
 import java.util.Scanner;
 
 public class ViewBookManager {
+    MessagesBiblio messages = new MessagesBiblio();
 
     public void lendingDialog(){
         Scanner scan = new Scanner(System.in);
@@ -11,7 +12,7 @@ public class ViewBookManager {
         System.out.println("Enter your Name");
         String personName = scan.next();
 
-        System.out.println(MessagesBiblio.enterIdForCheckout());
+        System.out.println(messages.enterIdForCheckout());
         String requestedBookId = scan.next();
         int parsedId = Integer.parseInt(requestedBookId);
 
