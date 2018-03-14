@@ -6,7 +6,7 @@ public class BibliotecaStorage {
 
     private static ArrayList<SingleBook> bookCollection = new ArrayList<SingleBook>();
 
-    public static void initialize(){
+    public void initialize(){
         ArrayList<SingleBook> mockBooks = new ArrayList<SingleBook>();
         SingleBook book0 = new SingleBook(2,"mockBook0", "author0", 2000);
         SingleBook book1 = new SingleBook(3,"mockBook1", "author1", 2001);
@@ -18,11 +18,11 @@ public class BibliotecaStorage {
         bookCollection = mockBooks;
     }
 
-    public static ArrayList<SingleBook> getBookCollection(){
+    public ArrayList<SingleBook> getBookCollection(){
         return bookCollection;
     }
 
-    public static void updateBook(SingleBook alteredBook){
+    public void updateBook(SingleBook alteredBook){
         for (SingleBook book : bookCollection) {
             if(book.getBookId() == alteredBook.getBookId()){
                 int foundIndex = bookCollection.indexOf(book);

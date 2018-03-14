@@ -11,6 +11,7 @@ import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
 public class FlowControlTest {
+    BibliotecaStorage storage = new BibliotecaStorage();
 
     private final ByteArrayOutputStream printedOutput = new ByteArrayOutputStream();
 
@@ -28,7 +29,7 @@ public class FlowControlTest {
     public void shouldLaunchTheViewBookLister() {
         FlowControl flowControl = new FlowControl();
 
-        BibliotecaStorage.initialize();
+       storage.initialize();
 
         flowControl.launch("List Books");
 

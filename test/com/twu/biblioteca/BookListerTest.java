@@ -9,10 +9,11 @@ import java.util.ArrayList;
 
 public class BookListerTest {
     BookManager bookManager = new BookManager();
+    BibliotecaStorage storage = new BibliotecaStorage();
 
     @Before
     public void captureStream() {
-        BibliotecaStorage.initialize();
+       storage.initialize();
     }
 
     @Test

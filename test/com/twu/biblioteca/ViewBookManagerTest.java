@@ -16,11 +16,12 @@ public class ViewBookManagerTest {
     private final ByteArrayOutputStream printedOutput = new ByteArrayOutputStream();
     BookManager bookManager = new BookManager();
     ViewBookManager viewBookManager = new ViewBookManager();
+    BibliotecaStorage storage =new BibliotecaStorage();
 
     @Before
     public void captureStream() {
         System.setOut(new PrintStream(printedOutput));
-        BibliotecaStorage.initialize();
+        storage.initialize();
     }
 
     @After

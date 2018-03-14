@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class BookManager {
 
+    BibliotecaStorage storage = new BibliotecaStorage();
+
     public boolean lend(int requestedBookId, String personName){
         BookLister bookLister = new BookLister();
         ArrayList<SingleBook> allBooks = bookLister.getAllBooks();
@@ -14,7 +16,7 @@ public class BookManager {
 
                 foundBook.setCheckedOutByPerson(personName);
                 foundBook.setIsCheckedOut(true);
-                BibliotecaStorage.updateBook(foundBook);
+                storage.updateBook(foundBook);
                 return foundBook.getIsCheckedOut();
             }
         }
@@ -32,7 +34,7 @@ public class BookManager {
                     SingleBook foundBook = book;
                     foundBook.setCheckedOutByPerson(null);
                     foundBook.setIsCheckedOut(false);
-                    BibliotecaStorage.updateBook(foundBook);
+                    storage.updateBook(foundBook);
                     return !foundBook.getIsCheckedOut();
                 }
             }

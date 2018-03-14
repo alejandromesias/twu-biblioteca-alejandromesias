@@ -4,17 +4,16 @@ package com.twu.biblioteca;
 
 public class BookLister {
 
-    public BookLister() {
-    }
+    BibliotecaStorage storage = new BibliotecaStorage();
 
     public ArrayList<SingleBook> getAllBooks(){
 
-        ArrayList<SingleBook> allBooks = BibliotecaStorage.getBookCollection();
+        ArrayList<SingleBook> allBooks = storage.getBookCollection();
         if(allBooks.isEmpty()){
-            BibliotecaStorage.initialize();
+            storage.initialize();
         }
 
-        allBooks = BibliotecaStorage.getBookCollection();
+        allBooks = storage.getBookCollection();
         return allBooks;
     }
 

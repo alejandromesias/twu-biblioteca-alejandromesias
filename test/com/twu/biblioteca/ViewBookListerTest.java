@@ -10,7 +10,7 @@ import java.io.PrintStream;
 import static junit.framework.TestCase.assertEquals;
 
 public class ViewBookListerTest {
-
+    BibliotecaStorage storage = new BibliotecaStorage();
     private final ByteArrayOutputStream printedOutput = new ByteArrayOutputStream();
 
     @Before
@@ -33,7 +33,7 @@ public class ViewBookListerTest {
         String row2   = "4    mockBook2      author2        2002 \n";
         String listContent = header + row0 + row1 + row2;
 
-        BibliotecaStorage.initialize();
+       storage.initialize();
 
         viewBookLister.display();
         assertEquals(listContent, printedOutput.toString());

@@ -10,11 +10,12 @@ import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;
 
 public class BookManagerTest {
+    BibliotecaStorage storage = new BibliotecaStorage();
     BookManager bookManager = new BookManager();
 
     @Before
     public void refreshStorage() {
-        BibliotecaStorage.initialize();
+        storage.initialize();
     }
 
     @Test
@@ -34,7 +35,7 @@ public class BookManagerTest {
 
         bookManager.lend(testId, TestName);
 
-        ArrayList<SingleBook> newFakeBooks = BibliotecaStorage.getBookCollection();
+        ArrayList<SingleBook> newFakeBooks = storage.getBookCollection();
 
         SingleBook TestBook= newFakeBooks.get(1);
 

@@ -10,12 +10,12 @@ import static junit.framework.TestCase.assertEquals;
 public class BibliotecaStorageTest {
 
     ArrayList<SingleBook> fakeBooks;
+    BibliotecaStorage storage = new BibliotecaStorage();
 
     @Before
     public void setUp(){
-        BibliotecaStorage.initialize();
-
-        fakeBooks = BibliotecaStorage.getBookCollection();
+        storage.initialize();
+        fakeBooks = storage.getBookCollection();
     }
 
 
@@ -31,11 +31,11 @@ public class BibliotecaStorageTest {
     public void shouldUpdateABook() {
         assertEquals(2001, fakeBooks.get(1).getYear());
 
-        ArrayList<SingleBook> newFakeBooks = BibliotecaStorage.getBookCollection();
+        ArrayList<SingleBook> newFakeBooks = storage.getBookCollection();
 
         SingleBook alteredBook = new SingleBook(3,"mockBook1", "author1", 2011);
 
-        BibliotecaStorage.updateBook(alteredBook);
+        storage.updateBook(alteredBook);
 
         assertEquals(2011, newFakeBooks.get(1).getYear());
     }
