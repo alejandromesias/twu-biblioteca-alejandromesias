@@ -6,7 +6,7 @@ public class MessagesBiblio {
         return welcomeMessage;
     }
 
-    public String pickAMenuChoice(){
+    public String printmenuInstructions(){
         String menuMessage = "Please type the letter that marks your option!";
         return menuMessage;
     }

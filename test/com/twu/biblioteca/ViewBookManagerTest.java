@@ -16,7 +16,7 @@ public class ViewBookManagerTest {
     private final ByteArrayOutputStream printedOutput = new ByteArrayOutputStream();
     BookManager bookManager = new BookManager();
     ViewBookManager viewBookManager = new ViewBookManager();
-    BibliotecaStorage storage =new BibliotecaStorage();
+    BibliotecaStorage storage = new BibliotecaStorage();
 
     @Before
     public void captureStream() {
@@ -66,6 +66,25 @@ public class ViewBookManagerTest {
     }
 
     @Test
+    public void shouldValidateDataTypeFromTheUserOnFailedLending() {
+
+        String bookId = "Dani\nQ";
+        InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
+        System.setIn(menuInput);
+
+        viewBookManager.lendingDialog();
+
+        String expectedMessage = "no válido";
+        String expectedData = ", Dani";
+
+        assertTrue(printedOutput.toString().contains(expectedMessage));
+        assertTrue(printedOutput.toString().contains(expectedData));
+
+        System.setIn(System.in);
+    }
+
+
+    @Test
     public void shouldGetDataFromTheUserForSuccessfulRestoring() {
 
         bookManager.lend(3,"Dani");
@@ -104,4 +123,24 @@ public class ViewBookManagerTest {
 
         System.setIn(System.in);
     }
+
+    @Test
+    public void shouldValidateDataTypeFromTheUserOnFailedRestoring() {
+
+        String bookId = "Dani\nQ";
+        InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
+        System.setIn(menuInput);
+
+        viewBookManager.restoringDialog();
+
+        String expectedMessage = "no válido";
+        String expectedData = ", Dani";
+
+        assertTrue(printedOutput.toString().contains(expectedMessage));
+        assertTrue(printedOutput.toString().contains(expectedData));
+
+        System.setIn(System.in);
+    }
+
+
 }

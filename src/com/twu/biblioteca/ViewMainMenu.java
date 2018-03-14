@@ -5,11 +5,12 @@ import java.util.Scanner;
 
 public class ViewMainMenu {
     MessagesBiblio messages = new MessagesBiblio();
+    MainMenu mainMenu = new MainMenu();
+    FlowControl flowControl = new FlowControl();
 
     public void display(){
         System.out.println("** MENU **");
 
-        MainMenu mainMenu = new MainMenu();
         ArrayList<MenuOption> menuOptions = mainMenu.getOptions();
 
         for (MenuOption option: menuOptions) {
@@ -19,9 +20,8 @@ public class ViewMainMenu {
     }
 
     public void getAndDisplayUsersChoice() {
-        MainMenu mainMenu = new MainMenu();
-        FlowControl flowControl = new FlowControl();
-        System.out.println(messages.pickAMenuChoice());
+
+        System.out.println(messages.printmenuInstructions());
 
         Scanner scan = new Scanner(System.in);
         String userChoice = scan.next();

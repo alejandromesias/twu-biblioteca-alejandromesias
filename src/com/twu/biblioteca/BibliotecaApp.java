@@ -6,8 +6,10 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
 
+        FlowControl flowControl = new FlowControl();
         ViewMainMenu viewMainMenu = new ViewMainMenu();
         ViewMessagesBiblio viewMessagesBiblio = new ViewMessagesBiblio();
+
 
         viewMessagesBiblio.welcome();
 
