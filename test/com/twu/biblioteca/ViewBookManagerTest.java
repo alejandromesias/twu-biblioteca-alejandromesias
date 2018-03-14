@@ -8,14 +8,15 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.Scanner;
 
 import static junit.framework.TestCase.assertTrue;
 
 public class ViewBookManagerTest {
 
     private final ByteArrayOutputStream printedOutput = new ByteArrayOutputStream();
+
     BookManager bookManager = new BookManager();
-    ViewBookManager viewBookManager = new ViewBookManager();
     BibliotecaStorage storage = new BibliotecaStorage();
 
     @Before
@@ -35,6 +36,8 @@ public class ViewBookManagerTest {
         String bookId = "Dani\n3";
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
         System.setIn(menuInput);
+        Scanner scanner = new Scanner(System.in);
+        ViewBookManager viewBookManager = new ViewBookManager(scanner);
 
         viewBookManager.lendingDialog();
 
@@ -53,6 +56,9 @@ public class ViewBookManagerTest {
         String bookId = "Dani\n9";
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
         System.setIn(menuInput);
+        Scanner scanner = new Scanner(System.in);
+        ViewBookManager viewBookManager = new ViewBookManager(scanner);
+
 
         viewBookManager.lendingDialog();
 
@@ -71,6 +77,9 @@ public class ViewBookManagerTest {
         String bookId = "Dani\nQ";
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
         System.setIn(menuInput);
+        Scanner scanner = new Scanner(System.in);
+        ViewBookManager viewBookManager = new ViewBookManager(scanner);
+
 
         viewBookManager.lendingDialog();
 
@@ -92,6 +101,9 @@ public class ViewBookManagerTest {
         String bookId = "Dani\n3";
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
         System.setIn(menuInput);
+        Scanner scanner = new Scanner(System.in);
+        ViewBookManager viewBookManager = new ViewBookManager(scanner);
+
 
         viewBookManager.restoringDialog();
 
@@ -112,6 +124,9 @@ public class ViewBookManagerTest {
         String bookId = "Mani\n3";
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
         System.setIn(menuInput);
+        Scanner scanner = new Scanner(System.in);
+        ViewBookManager viewBookManager = new ViewBookManager(scanner);
+
 
         viewBookManager.restoringDialog();
 
@@ -130,6 +145,9 @@ public class ViewBookManagerTest {
         String bookId = "Dani\nQ";
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
         System.setIn(menuInput);
+        Scanner scanner = new Scanner(System.in);
+        ViewBookManager viewBookManager = new ViewBookManager(scanner);
+
 
         viewBookManager.restoringDialog();
 

@@ -4,16 +4,20 @@ import java.util.Scanner;
 
 public class ViewBookManager {
     MessagesBiblio messages = new MessagesBiblio();
+    Scanner scanner;
+
+    public ViewBookManager(Scanner scanner) {
+        this.scanner = scanner;
+    }
 
     public void lendingDialog(){
-        Scanner scan = new Scanner(System.in);
         BookManager bookManager = new BookManager();
 
         System.out.println("Enter your Name");
-        String personName = scan.next();
+        String personName = scanner.next();
 
         System.out.println(messages.enterIdForCheckout());
-        String requestedBookId = scan.next();
+        String requestedBookId = scanner.next();
         try {
             int parsedId = Integer.parseInt(requestedBookId);
             boolean bookWasLent = bookManager.lend(parsedId, personName);
@@ -29,14 +33,13 @@ public class ViewBookManager {
     }
 
     public void restoringDialog(){
-        Scanner scan = new Scanner(System.in);
         BookManager bookManager = new BookManager();
 
         System.out.println("Enter your Name");
-        String personName = scan.next();
+        String personName = scanner.next();
 
         System.out.println("Enter the ID of the book you are returning");
-        String requestedBookId = scan.next();
+        String requestedBookId = scanner.next();
         try{
             int parsedId = Integer.parseInt(requestedBookId);
             if (bookManager.restore(parsedId,personName)){

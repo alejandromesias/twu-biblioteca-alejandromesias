@@ -8,6 +8,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.Scanner;
 
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
@@ -28,7 +29,8 @@ public class ViewMainMenuTest {
 
     @Test
     public void shouldDisplayTheMainMenu() {
-        ViewMainMenu viewMainMenu = new ViewMainMenu();
+        Scanner scanner = new Scanner(System.in);
+        ViewMainMenu viewMainMenu = new ViewMainMenu(scanner);
 
         String title = "** MENU **\n";
         String row0 = "a. List Books\n";
@@ -44,11 +46,12 @@ public class ViewMainMenuTest {
 
     @Test
     public void shouldDisplayTheChosenOptionA() {
-        ViewMainMenu viewMainMenu = new ViewMainMenu();
-
         String mockInput = "a";
         InputStream menuInput = new ByteArrayInputStream(mockInput.getBytes());
         System.setIn(menuInput);
+        System.setIn(menuInput);
+        Scanner scanner = new Scanner(System.in);
+        ViewMainMenu viewMainMenu = new ViewMainMenu(scanner);
 
         viewMainMenu.getAndDisplayUsersChoice();
 
@@ -61,11 +64,11 @@ public class ViewMainMenuTest {
 
     @Test
     public void shouldDisplayTheChosenOptionQ() {
-        ViewMainMenu viewMainMenu = new ViewMainMenu();
-
         String mockInput = "q";
         InputStream menuInput = new ByteArrayInputStream(mockInput.getBytes());
         System.setIn(menuInput);
+        Scanner scanner = new Scanner(System.in);
+        ViewMainMenu viewMainMenu = new ViewMainMenu(scanner);
 
         viewMainMenu.getAndDisplayUsersChoice();
 
@@ -78,11 +81,13 @@ public class ViewMainMenuTest {
 
     @Test
     public void shouldDisplayInvalidMenuOption() {
-        ViewMainMenu viewMainMenu = new ViewMainMenu();
+
 
         String mockInput = "p";
         InputStream menuInput = new ByteArrayInputStream(mockInput.getBytes());
         System.setIn(menuInput);
+        Scanner scanner = new Scanner(System.in);
+        ViewMainMenu viewMainMenu = new ViewMainMenu(scanner);
 
         viewMainMenu.getAndDisplayUsersChoice();
 

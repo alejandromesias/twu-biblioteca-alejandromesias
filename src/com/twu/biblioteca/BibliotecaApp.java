@@ -1,5 +1,7 @@
 package com.twu.biblioteca;
 
+import java.util.Scanner;
+
 public class BibliotecaApp {
 
     public static boolean stopApp;
@@ -7,7 +9,8 @@ public class BibliotecaApp {
     public static void main(String[] args) {
 
         FlowControl flowControl = new FlowControl();
-        ViewMainMenu viewMainMenu = new ViewMainMenu();
+        Scanner scanner = new Scanner(System.in);
+        ViewMainMenu viewMainMenu = new ViewMainMenu(scanner);
         ViewMessagesBiblio viewMessagesBiblio = new ViewMessagesBiblio();
 
 

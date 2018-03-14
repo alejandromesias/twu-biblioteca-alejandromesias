@@ -4,9 +4,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ViewMainMenu {
+    Scanner scanner;
+
     MessagesBiblio messages = new MessagesBiblio();
     MainMenu mainMenu = new MainMenu();
     FlowControl flowControl = new FlowControl();
+
+    public ViewMainMenu(Scanner scanner) {
+        this.scanner = scanner;
+    }
 
     public void display(){
         System.out.println("** MENU **");
@@ -22,9 +28,7 @@ public class ViewMainMenu {
     public void getAndDisplayUsersChoice() {
 
         System.out.println(messages.printmenuInstructions());
-
-        Scanner scan = new Scanner(System.in);
-        String userChoice = scan.next();
+        String userChoice = scanner.next();
 
         String optionLabel = mainMenu.retrieveOption(userChoice);
         if (optionLabel.equals("not found")) {
