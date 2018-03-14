@@ -4,15 +4,17 @@ public class FlowControl {
 
     //TODO: Replace this code smell with polymorphism
     public void launch(String code){
+        ViewBookLister viewBookLister = new ViewBookLister();
+        ViewBookManager viewBookManager = new ViewBookManager();
+
         if (code == "List Books"){
-            ViewBookLister viewBookLister = new ViewBookLister();
             viewBookLister.display();
         }
         else if(code == "Check out book"){
-            ViewBookManager.lendingDialog();
+            viewBookManager.lendingDialog();
         }
         else if(code == "Return book"){
-            ViewBookManager.restoringDialog();
+            viewBookManager.restoringDialog();
         }
         else if(code == "Quit") {
             BibliotecaApp.stopApp = true;

@@ -12,6 +12,7 @@ import static junit.framework.TestCase.assertEquals;
 public class ViewMessagesBiblioTest {
 
     private final ByteArrayOutputStream printedOutput = new ByteArrayOutputStream();
+    ViewMessagesBiblio viewMessagesBiblio = new ViewMessagesBiblio();
 
     @Before
     public void captureStream() {
@@ -26,7 +27,7 @@ public class ViewMessagesBiblioTest {
     @Test
     public void shouldDisplayTheWelcomeMessage() {
         String wellcomeMessage = MessagesBiblio.welcome()+"\n";
-        ViewMessagesBiblio.welcome();
+        viewMessagesBiblio.welcome();
         assertEquals(wellcomeMessage, printedOutput.toString());
     }
 }

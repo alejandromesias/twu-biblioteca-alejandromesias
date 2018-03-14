@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ViewBookManager {
 
-    public static void lendingDialog(){
+    public void lendingDialog(){
         Scanner scan = new Scanner(System.in);
         BookManager bookManager = new BookManager();
 
@@ -24,7 +24,7 @@ public class ViewBookManager {
         }
     }
 
-    public static void restoringDialog(){
+    public void restoringDialog(){
         Scanner scan = new Scanner(System.in);
         BookManager bookManager = new BookManager();
 

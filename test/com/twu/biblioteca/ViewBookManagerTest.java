@@ -15,6 +15,7 @@ public class ViewBookManagerTest {
 
     private final ByteArrayOutputStream printedOutput = new ByteArrayOutputStream();
     BookManager bookManager = new BookManager();
+    ViewBookManager viewBookManager = new ViewBookManager();
 
     @Before
     public void captureStream() {
@@ -34,7 +35,7 @@ public class ViewBookManagerTest {
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
         System.setIn(menuInput);
 
-        ViewBookManager.lendingDialog();
+        viewBookManager.lendingDialog();
 
         String expectedMessage = "Enjoy the book";
         String expectedData = "3, Dani";
@@ -52,7 +53,7 @@ public class ViewBookManagerTest {
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
         System.setIn(menuInput);
 
-        ViewBookManager.lendingDialog();
+        viewBookManager.lendingDialog();
 
         String expectedMessage = "not available";
         String expectedData = "9, Dani";
@@ -72,7 +73,7 @@ public class ViewBookManagerTest {
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
         System.setIn(menuInput);
 
-        ViewBookManager.restoringDialog();
+        viewBookManager.restoringDialog();
 
         String expectedMessage = "returning the book";
         String expectedData = "3, Dani";
@@ -92,7 +93,7 @@ public class ViewBookManagerTest {
         InputStream menuInput = new ByteArrayInputStream(bookId.getBytes());
         System.setIn(menuInput);
 
-        ViewBookManager.restoringDialog();
+        viewBookManager.restoringDialog();
 
         String expectedMessage = "not a valid book";
         String expectedData = "3, Mani";

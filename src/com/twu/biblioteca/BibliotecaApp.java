@@ -7,8 +7,9 @@ public class BibliotecaApp {
     public static void main(String[] args) {
 
         ViewMainMenu viewMainMenu = new ViewMainMenu();
+        ViewMessagesBiblio viewMessagesBiblio = new ViewMessagesBiblio();
 
-        ViewMessagesBiblio.welcome();
+        viewMessagesBiblio.welcome();
 
         while(!stopApp) {
             System.out.println("--------------");
