@@ -3,7 +3,11 @@ package com.twu.biblioteca;
         import java.util.ArrayList;
 
 public class BookLister {
-    public static ArrayList<SingleBook> getAllBooks(){
+
+    public BookLister() {
+    }
+
+    public ArrayList<SingleBook> getAllBooks(){
 
         ArrayList<SingleBook> allBooks = BibliotecaStorage.getBookCollection();
         if(allBooks.isEmpty()){
@@ -14,7 +18,7 @@ public class BookLister {
         return allBooks;
     }
 
-    public static ArrayList<SingleBook> getAvailableBooks() {
+    public ArrayList<SingleBook> getAvailableBooks() {
 
         ArrayList<SingleBook> allBooksList = getAllBooks();
         ArrayList<SingleBook> availableBooksList = new ArrayList<SingleBook>();

@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public class BookManager {
 
     public static boolean lend(int requestedBookId, String personName){
-        ArrayList<SingleBook> allBooks = BookLister.getAllBooks();
+        BookLister bookLister = new BookLister();
+        ArrayList<SingleBook> allBooks = bookLister.getAllBooks();
 
         for (SingleBook book : allBooks){
             if (book.getBookId() == requestedBookId) {
@@ -22,7 +23,8 @@ public class BookManager {
     }
 
     public static Boolean restore(int requestedBookId, String personName) {
-        ArrayList<SingleBook> allBooks = BookLister.getAllBooks();
+        BookLister bookLister = new BookLister();
+        ArrayList<SingleBook> allBooks = bookLister.getAllBooks();
 
         for (SingleBook book : allBooks){
             if (book.getCheckedOutByPerson() != null) {

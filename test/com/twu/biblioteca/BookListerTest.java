@@ -17,8 +17,8 @@ public class BookListerTest {
     @Test
     public void ShouldReturnAListOfAllBooks() {
         ArrayList<SingleBook> booksList;
-
-        booksList = BookLister.getAllBooks();
+        BookLister bookLister = new BookLister();
+        booksList = bookLister.getAllBooks();
 
         assertEquals("mockBook0", booksList.get(0).getName());
         assertEquals("mockBook1", booksList.get(1).getName());
@@ -28,13 +28,14 @@ public class BookListerTest {
     @Test
     public void ShouldReturnAListOfAvailableBooksAfterLending() {
         ArrayList<SingleBook> booksList;
+        BookLister bookLister = new BookLister();
 
         int lendingTestId = 3;
         String lendingTestName = "Test Person";
 
         BookManager.lend(lendingTestId,lendingTestName);
 
-        booksList = BookLister.getAvailableBooks();
+        booksList = bookLister.getAvailableBooks();
 
         assertEquals("mockBook0", booksList.get(0).getName());
         assertEquals("mockBook2", booksList.get(1).getName());
@@ -44,6 +45,7 @@ public class BookListerTest {
     @Test
     public void ShouldReturnAListOfAvailableBooksAfterLendingAndRestoring() {
         ArrayList<SingleBook> booksList;
+        BookLister bookLister = new BookLister();
 
         int lendingTestId = 3;
         String lendingTestName = "Test Person";
@@ -52,7 +54,7 @@ public class BookListerTest {
 
         BookManager.restore(lendingTestId,lendingTestName);
 
-        booksList = BookLister.getAvailableBooks();
+        booksList = bookLister.getAvailableBooks();
 
         assertEquals("mockBook0", booksList.get(0).getName());
         assertEquals("mockBook1", booksList.get(1).getName());
