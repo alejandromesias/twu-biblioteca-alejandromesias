@@ -39,7 +39,7 @@ public class ViewBookManagerTest {
         Scanner scanner = new Scanner(System.in);
         ViewBookManager viewBookManager = new ViewBookManager(scanner);
 
-        viewBookManager.lendingDialog();
+        viewBookManager.requestInfoForLending();
 
         String expectedMessage = "Enjoy the book";
         String expectedData = "3, Dani";
@@ -60,7 +60,7 @@ public class ViewBookManagerTest {
         ViewBookManager viewBookManager = new ViewBookManager(scanner);
 
 
-        viewBookManager.lendingDialog();
+        viewBookManager.requestInfoForLending();
 
         String expectedMessage = "not available";
         String expectedData = "9, Dani";
@@ -81,7 +81,7 @@ public class ViewBookManagerTest {
         ViewBookManager viewBookManager = new ViewBookManager(scanner);
 
 
-        viewBookManager.lendingDialog();
+        viewBookManager.requestInfoForLending();
 
         String expectedMessage = "no válido";
         String expectedData = ", Dani";
@@ -105,7 +105,7 @@ public class ViewBookManagerTest {
         ViewBookManager viewBookManager = new ViewBookManager(scanner);
 
 
-        viewBookManager.restoringDialog();
+        viewBookManager.requestInfoForRestoring();
 
         String expectedMessage = "returning the book";
         String expectedData = "3, Dani";
@@ -128,7 +128,7 @@ public class ViewBookManagerTest {
         ViewBookManager viewBookManager = new ViewBookManager(scanner);
 
 
-        viewBookManager.restoringDialog();
+        viewBookManager.requestInfoForRestoring();
 
         String expectedMessage = "not a valid book";
         String expectedData = "3, Mani";
@@ -149,7 +149,7 @@ public class ViewBookManagerTest {
         ViewBookManager viewBookManager = new ViewBookManager(scanner);
 
 
-        viewBookManager.restoringDialog();
+        viewBookManager.requestInfoForRestoring();
 
         String expectedMessage = "no válido";
         String expectedData = ", Dani";

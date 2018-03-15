@@ -15,10 +15,10 @@ public class FlowControl {
             viewBookLister.display();
         }
         else if(code.equals("Check out book")){
-            viewBookManager.lendingDialog();
+            viewBookManager.requestInfoForLending();
         }
         else if(code.equals("Return book")){
-            viewBookManager.restoringDialog();
+            viewBookManager.requestInfoForRestoring();
         }
         else if(code.equals("Quit")) {
             BibliotecaApp.stopApp = true;

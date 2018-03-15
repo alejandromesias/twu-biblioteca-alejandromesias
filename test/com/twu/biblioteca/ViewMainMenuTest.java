@@ -47,11 +47,7 @@ public class ViewMainMenuTest {
     @Test
     public void shouldDisplayTheChosenOptionA() {
         String mockInput = "a";
-        InputStream menuInput = new ByteArrayInputStream(mockInput.getBytes());
-        System.setIn(menuInput);
-        System.setIn(menuInput);
-        Scanner scanner = new Scanner(System.in);
-        ViewMainMenu viewMainMenu = new ViewMainMenu(scanner);
+        ViewMainMenu viewMainMenu = createViewMaiMenuWithCustomInput(mockInput);
 
         viewMainMenu.getAndDisplayUsersChoice();
 
@@ -62,13 +58,11 @@ public class ViewMainMenuTest {
         System.setIn(System.in);
     }
 
+
     @Test
     public void shouldDisplayTheChosenOptionQ() {
         String mockInput = "q";
-        InputStream menuInput = new ByteArrayInputStream(mockInput.getBytes());
-        System.setIn(menuInput);
-        Scanner scanner = new Scanner(System.in);
-        ViewMainMenu viewMainMenu = new ViewMainMenu(scanner);
+        ViewMainMenu viewMainMenu = createViewMaiMenuWithCustomInput(mockInput);
 
         viewMainMenu.getAndDisplayUsersChoice();
 
@@ -81,13 +75,8 @@ public class ViewMainMenuTest {
 
     @Test
     public void shouldDisplayInvalidMenuOption() {
-
-
         String mockInput = "p";
-        InputStream menuInput = new ByteArrayInputStream(mockInput.getBytes());
-        System.setIn(menuInput);
-        Scanner scanner = new Scanner(System.in);
-        ViewMainMenu viewMainMenu = new ViewMainMenu(scanner);
+        ViewMainMenu viewMainMenu = createViewMaiMenuWithCustomInput(mockInput);
 
         viewMainMenu.getAndDisplayUsersChoice();
 
@@ -95,5 +84,12 @@ public class ViewMainMenuTest {
         assertTrue(printedOutput.toString().contains(menuChoice));
 
         System.setIn(System.in);
+    }
+
+    private ViewMainMenu createViewMaiMenuWithCustomInput(String mockInput) {
+        InputStream menuInput = new ByteArrayInputStream(mockInput.getBytes());
+        System.setIn(menuInput);
+        Scanner scanner = new Scanner(System.in);
+        return new ViewMainMenu(scanner);
     }
 }
