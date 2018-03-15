@@ -8,13 +8,13 @@ import java.io.PrintStream;
 import static org.junit.Assert.assertEquals;
 
 
-public class SingleBookTest {
+public class BookTest {
 
-    private SingleBook aBook;
+    private Book aBook;
 
     @Before
     public void setUp() {
-        aBook = new SingleBook(999,"testName",
+        aBook = new Book(999,"testName",
                 "testAuthor", 2000);
 
     }

@@ -18,7 +18,7 @@ public class BookListerTest {
 
     @Test
     public void shouldReturnAListOfAllBooks() {
-        ArrayList<SingleBook> booksList;
+        ArrayList<Book> booksList;
         BookLister bookLister = new BookLister();
         booksList = bookLister.getAllBooks();
 
@@ -29,7 +29,7 @@ public class BookListerTest {
 
     @Test
     public void shouldReturnAListOfAvailableBooksAfterLending() {
-        ArrayList<SingleBook> booksList;
+        ArrayList<Book> booksList;
         BookLister bookLister = new BookLister();
 
         int lendingTestId = 3;
@@ -46,7 +46,7 @@ public class BookListerTest {
 
     @Test
     public void shouldReturnAListOfAvailableBooksAfterLendingAndRestoring() {
-        ArrayList<SingleBook> booksList;
+        ArrayList<Book> booksList;
         BookLister bookLister = new BookLister();
 
         int lendingTestId = 3;

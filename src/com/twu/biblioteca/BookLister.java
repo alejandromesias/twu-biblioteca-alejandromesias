@@ -6,9 +6,9 @@ public class BookLister {
 
     BibliotecaStorage storage = new BibliotecaStorage();
 
-    public ArrayList<SingleBook> getAllBooks(){
+    public ArrayList<Book> getAllBooks(){
 
-        ArrayList<SingleBook> allBooks = storage.getBookCollection();
+        ArrayList<Book> allBooks = storage.getBookCollection();
         if(allBooks.isEmpty()){
             storage.initialize();
         }
@@ -17,12 +17,12 @@ public class BookLister {
         return allBooks;
     }
 
-    public ArrayList<SingleBook> getAvailableBooks() {
+    public ArrayList<Book> getAvailableBooks() {
 
-        ArrayList<SingleBook> allBooksList = getAllBooks();
-        ArrayList<SingleBook> availableBooksList = new ArrayList<SingleBook>();
+        ArrayList<Book> allBooksList = getAllBooks();
+        ArrayList<Book> availableBooksList = new ArrayList<Book>();
 
-        for ( SingleBook book: allBooksList ) {
+        for ( Book book: allBooksList ) {
             if(!book.getIsCheckedOut()){
                 availableBooksList.add(book);
             }

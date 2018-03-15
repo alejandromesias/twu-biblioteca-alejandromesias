@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-public class SingleBook {
+public class Book {
     private int bookId;
     private String name;
     private String author;
@@ -9,7 +9,7 @@ public class SingleBook {
     private boolean isCheckedOut;
     private String checkedOutByPerson;
 
-    public SingleBook(int bookId, String name, String author, int year) {
+    public Book(int bookId, String name, String author, int year) {
         this.bookId = bookId;
         this.name = name;
         this.author = author;

@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class BibliotecaStorage {
 
-    private static ArrayList<SingleBook> bookCollection = new ArrayList<SingleBook>();
+    private static ArrayList<Book> bookCollection = new ArrayList<Book>();
 
     public void initialize(){
-        ArrayList<SingleBook> mockBooks = new ArrayList<SingleBook>();
-        SingleBook book0 = new SingleBook(2,"mockBook0", "author0", 2000);
-        SingleBook book1 = new SingleBook(3,"mockBook1", "author1", 2001);
-        SingleBook book2 = new SingleBook(4,"mockBook2", "author2", 2002);
+        ArrayList<Book> mockBooks = new ArrayList<Book>();
+        Book book0 = new Book(2,"mockBook0", "author0", 2000);
+        Book book1 = new Book(3,"mockBook1", "author1", 2001);
+        Book book2 = new Book(4,"mockBook2", "author2", 2002);
         mockBooks.add(book0);
         mockBooks.add(book1);
         mockBooks.add(book2);
@@ -18,12 +18,12 @@ public class BibliotecaStorage {
         bookCollection = mockBooks;
     }
 
-    public ArrayList<SingleBook> getBookCollection(){
+    public ArrayList<Book> getBookCollection(){
         return bookCollection;
     }
 
-    public void updateBook(SingleBook alteredBook){
-        for (SingleBook book : bookCollection) {
+    public void updateBook(Book alteredBook){
+        for (Book book : bookCollection) {
             if(book.getBookId() == alteredBook.getBookId()){
                 int foundIndex = bookCollection.indexOf(book);
                 bookCollection.set(foundIndex,alteredBook);

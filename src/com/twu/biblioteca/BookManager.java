@@ -8,11 +8,11 @@ public class BookManager {
 
     public boolean lend(int requestedBookId, String personName){
         BookLister bookLister = new BookLister();
-        ArrayList<SingleBook> allBooks = bookLister.getAllBooks();
+        ArrayList<Book> allBooks = bookLister.getAllBooks();
 
-        for (SingleBook book : allBooks){
+        for (Book book : allBooks){
             if (book.getBookId() == requestedBookId) {
-                SingleBook foundBook = book;
+                Book foundBook = book;
 
                 foundBook.setCheckedOutByPerson(personName);
                 foundBook.setIsCheckedOut(true);
@@ -26,12 +26,12 @@ public class BookManager {
 
     public Boolean restore(int requestedBookId, String personName) {
         BookLister bookLister = new BookLister();
-        ArrayList<SingleBook> allBooks = bookLister.getAllBooks();
+        ArrayList<Book> allBooks = bookLister.getAllBooks();
 
-        for (SingleBook book : allBooks){
+        for (Book book : allBooks){
             if (book.getCheckedOutByPerson() != null) {
                 if (book.getBookId() == requestedBookId && book.getCheckedOutByPerson().equals(personName)) {
-                    SingleBook foundBook = book;
+                    Book foundBook = book;
                     foundBook.setCheckedOutByPerson(null);
                     foundBook.setIsCheckedOut(false);
                     storage.updateBook(foundBook);

@@ -9,7 +9,7 @@ import static junit.framework.TestCase.assertEquals;
 
 public class BibliotecaStorageTest {
 
-    ArrayList<SingleBook> fakeBooks;
+    ArrayList<Book> fakeBooks;
     BibliotecaStorage storage = new BibliotecaStorage();
 
     @Before
@@ -31,9 +31,9 @@ public class BibliotecaStorageTest {
     public void shouldUpdateABook() {
         assertEquals(2001, fakeBooks.get(1).getYear());
 
-        ArrayList<SingleBook> newFakeBooks = storage.getBookCollection();
+        ArrayList<Book> newFakeBooks = storage.getBookCollection();
 
-        SingleBook alteredBook = new SingleBook(3,"mockBook1", "author1", 2011);
+        Book alteredBook = new Book(3,"mockBook1", "author1", 2011);
 
         storage.updateBook(alteredBook);
 

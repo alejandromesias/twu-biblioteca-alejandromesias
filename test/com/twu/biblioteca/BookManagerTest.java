@@ -35,9 +35,9 @@ public class BookManagerTest {
 
         bookManager.lend(testId, TestName);
 
-        ArrayList<SingleBook> newFakeBooks = storage.getBookCollection();
+        ArrayList<Book> newFakeBooks = storage.getBookCollection();
 
-        SingleBook TestBook= newFakeBooks.get(1);
+        Book TestBook= newFakeBooks.get(1);
 
         assertTrue(TestBook.getIsCheckedOut());
         assertEquals(TestName, TestBook.getCheckedOutByPerson());
