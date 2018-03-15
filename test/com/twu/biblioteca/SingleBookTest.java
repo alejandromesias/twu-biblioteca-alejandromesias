@@ -14,7 +14,8 @@ public class SingleBookTest {
 
     @Before
     public void setUp() {
-        aBook = new SingleBook(999,"testName", "testAuthor", 2000);
+        aBook = new SingleBook(999,"testName",
+                "testAuthor", 2000);
 
     }
 
