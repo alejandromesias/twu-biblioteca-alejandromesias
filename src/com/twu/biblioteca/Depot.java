@@ -5,13 +5,19 @@ import java.util.ArrayList;
 public class Depot {
 
     private ArrayList<UserAccount> usersList;
+    private ArrayList<Movie> moviesList;
 
     public Depot() {
         this.usersList = buildUsers();
+        this.moviesList = buildMovies();
     }
 
     public ArrayList<UserAccount> getUsersList() {
         return usersList;
+    }
+
+    public ArrayList<Movie> getMoviesList() {
+        return moviesList;
     }
 
     private ArrayList<UserAccount> buildUsers(){
@@ -37,5 +43,30 @@ public class Depot {
         users.add(user);
 
         return users;
+    }
+
+    private ArrayList<Movie> buildMovies(){
+        ArrayList<Movie> movies = new ArrayList<Movie>();
+        Movie movie;
+        movie = new Movie(3,
+                "theMovie0",
+                "Director0",
+                2010,
+                10);
+        movies.add(movie);
+        movie = new Movie(4,
+                "theMovie1",
+                "Director1",
+                2011,
+                9);
+        movies.add(movie);
+        movie = new Movie(5,
+                "theMovie2",
+                "Director2",
+                2012,
+                8);
+        movies.add(movie);
+        
+        return movies;
     }
 }
