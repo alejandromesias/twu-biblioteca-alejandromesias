@@ -62,6 +62,18 @@ public class UserAccount{
 
     @Override
     public boolean equals(Object obj) {
-        return super.equals(obj);
+
+        UserAccount user = (UserAccount) obj;
+        if(user.getBibliotecaId() == this.getBibliotecaId() &&
+                user.getUserName().equals(this.getUserName()) &&
+                user.getUserEmail().equals(this.getUserEmail()) &&
+                user.getUserPhone().equals(this.getUserPhone())
+                ){
+            return true;
+        }
+        else{
+            return super.equals(obj);
+        }
+
     }
 }

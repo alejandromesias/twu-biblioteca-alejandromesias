@@ -2,11 +2,11 @@ package com.twu.biblioteca;
 
 import java.util.ArrayList;
 
-public class UserAutenticator {
+public class UserAuthenticator {
     private Depot depot;
     private UserAccount activeUser;
 
-    public UserAutenticator(Depot depot) {
+    public UserAuthenticator(Depot depot) {
         this.depot = depot;
     }
 
@@ -16,15 +16,17 @@ public class UserAutenticator {
         for (UserAccount user : usersList) {
             boolean usersIdMatch = bibliotecaId == user.getBibliotecaId();
             if(usersIdMatch){
-                boolean passwordMatch = password == user.getPassword();
+                boolean passwordMatch = password.equals(user.getPassword());
                 if(passwordMatch){
                     this.activeUser = user;
                 }
-
             }
         }
-
         return  activeUser;
+    }
+
+    public UserAccount getCurrentActiveUser() {
+        return activeUser;
     }
 
 }
