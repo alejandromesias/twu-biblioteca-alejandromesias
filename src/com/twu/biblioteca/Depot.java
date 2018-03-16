@@ -63,8 +63,7 @@ public class Depot {
         movie = new Movie(5,
                 "theMovie2",
                 "Director2",
-                2012,
-                8);
+                2012);
         movies.add(movie);
 
         return movies;
