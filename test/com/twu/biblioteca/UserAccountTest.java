@@ -26,4 +26,13 @@ public class UserAccountTest {
         assertEquals("testName@email.com", oneUserAccount.getUserEmail());
         assertEquals("0986424406", oneUserAccount.getUserPhone());
     }
+
+    @Test
+    public void shouldReturnPrintableUserInfo() {
+        String expectedUserPrint = "user name: testName\nemail: testName@email.com\nphone: 0986424406";
+
+        String userPrint = oneUserAccount.toString();
+
+        assertEquals(expectedUserPrint,userPrint);
+    }
 }

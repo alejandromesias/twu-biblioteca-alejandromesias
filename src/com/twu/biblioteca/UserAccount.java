@@ -76,4 +76,14 @@ public class UserAccount{
         }
 
     }
+
+    @Override
+    public String toString(){
+        String format = "user name: %s%nemail: %s%nphone: %s";
+        String printedUser = String.format(format,
+                this.userName,
+                this.userEmail,
+                this.userPhone);
+        return printedUser;
+    }
 }

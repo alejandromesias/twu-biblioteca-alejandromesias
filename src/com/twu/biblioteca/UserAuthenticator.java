@@ -10,7 +10,7 @@ public class UserAuthenticator {
         this.depot = depot;
     }
 
-    public UserAccount checkCredentials(int bibliotecaId, String password){
+    public UserAccount checkUserCredentials(int bibliotecaId, String password){
         ArrayList<UserAccount> usersList = depot.getUsersList();
 
         for (UserAccount user : usersList) {

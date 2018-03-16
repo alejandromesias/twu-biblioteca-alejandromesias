@@ -21,7 +21,7 @@ public class UserAuthenticatorTest {
         int testBibliotecaId = 2223333;
         String testPassword = "Password1";
 
-        UserAccount activeUser = authenticator.checkCredentials(testBibliotecaId,testPassword);
+        UserAccount activeUser = authenticator.checkUserCredentials(testBibliotecaId,testPassword);
 
         assertEquals(expectedUser, activeUser);
     }
@@ -32,7 +32,7 @@ public class UserAuthenticatorTest {
         int testBibliotecaId = 1112222;
         String testPassword = "Password1";
 
-        UserAccount activeUser = authenticator.checkCredentials(testBibliotecaId,testPassword);
+        UserAccount activeUser = authenticator.checkUserCredentials(testBibliotecaId,testPassword);
 
         assertNull(activeUser);
     }
@@ -43,7 +43,7 @@ public class UserAuthenticatorTest {
         int testBibliotecaId = 2223333;
         String testPassword = "Password2";
 
-        UserAccount activeUser = authenticator.checkCredentials(testBibliotecaId,testPassword);
+        UserAccount activeUser = authenticator.checkUserCredentials(testBibliotecaId,testPassword);
 
         assertNull(activeUser);
     }
@@ -53,7 +53,7 @@ public class UserAuthenticatorTest {
         UserAuthenticator authenticator = new UserAuthenticator(depot);
         int testBibliotecaId = 2223333;
         String testPassword = "Password1";
-        authenticator.checkCredentials(testBibliotecaId,testPassword);
+        authenticator.checkUserCredentials(testBibliotecaId,testPassword);
 
         UserAccount activeUser = authenticator.getCurrentActiveUser();
 
