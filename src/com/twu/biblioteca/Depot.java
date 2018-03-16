@@ -66,7 +66,7 @@ public class Depot {
                 2012,
                 8);
         movies.add(movie);
-        
+
         return movies;
     }
 }

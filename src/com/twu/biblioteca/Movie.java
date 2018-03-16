@@ -17,6 +17,17 @@ public class Movie {
         this.rating = rating;
     }
 
+    public Movie(int movieId, String name,
+                 String director, int year) {
+        this(
+                movieId,
+                name,
+                director,
+                year,
+                0
+        );
+    }
+
     public int getMovieId() {
         return movieId;
     }
