@@ -24,17 +24,17 @@ public class MovieLister {
                     movie.getName(),
                     movie.getDirector(),
                     movie.getYear(),
-                    validateRating(movie.getRating()));
+                    validateRatingToPrint(movie.getRating()));
         }
         list = header + body;
 
         return list;
     }
 
-    private String validateRating(int rating){
+    private String validateRatingToPrint(int rating){
         if(rating > 0 && rating <= 10){
             return Integer.toString(rating);
         }
-        return "no rating";
-    };
+        return "unrated";
+    }
 }

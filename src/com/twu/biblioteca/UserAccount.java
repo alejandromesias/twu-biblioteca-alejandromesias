@@ -59,4 +59,9 @@ public class UserAccount{
     public void setUserPhone(String userPhone) {
         this.userPhone = userPhone;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 }
