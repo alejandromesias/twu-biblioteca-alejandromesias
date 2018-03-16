@@ -12,7 +12,7 @@ public class MovieLister {
     public String getMoviesList(){
         ArrayList<Movie> MoviesList = depot.getMoviesList();
 
-        String table = "testString";
+        String list;
 
         String fourColumnsFormat = "%-5s%-15s%-15s%-5s%-10s%n";
         String header = String.format(fourColumnsFormat,"ID","Movie Name","Director","Year","Rating");
@@ -24,11 +24,17 @@ public class MovieLister {
                     movie.getName(),
                     movie.getDirector(),
                     movie.getYear(),
-                    movie.getRating());
+                    validateRating(movie.getRating()));
         }
-        table = header + body;
+        list = header + body;
 
-        return table;
+        return list;
     }
 
+    private String validateRating(int rating){
+        if(rating > 0 && rating <= 10){
+            return Integer.toString(rating);
+        }
+        return "no rating";
+    };
 }

@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9019f2ae-0651-4b75-8e58-d9459b550751" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/MovieLister.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/MovieListerTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Depot.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Depot.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/MovieLister.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/MovieLister.java" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/MovieListerTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/MovieListerTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,7 +69,7 @@
             <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/MovieListerTest.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="255">
-                  <caret line="17" column="60" lean-forward="false" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+                  <caret line="17" column="74" lean-forward="false" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -123,8 +122,8 @@
           <file leaf-file-name="MovieLister.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MovieLister.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+                <state relative-caret-position="235">
+                  <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
                   <folding>
                     <element signature="e#147#148#0" expanded="true" />
                     <element signature="e#181#182#0" expanded="true" />
@@ -210,8 +209,8 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Movie.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/MovieTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Depot.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/MovieLister.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/MovieListerTest.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/MovieLister.java" />
       </list>
     </option>
   </component>
@@ -567,21 +566,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.15 at 17h 30m 20s.xml">
-      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.15 at 18h 46m 57s.xml">
-      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.15 at 18h 47m 04s.xml">
-      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.15 at 19h 09m 46s.xml">
-      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.15 at 23h 02m 31s.xml">
-      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.15 at 23h 06m 27s.xml">
       <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
     </history-entry>
@@ -595,6 +579,21 @@
       <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
     </history-entry>
     <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.16 at 00h 19m 54s.xml">
+      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.16 at 00h 21m 27s.xml">
+      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.16 at 07h 32m 02s.xml">
+      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.16 at 07h 37m 38s.xml">
+      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.16 at 07h 38m 49s.xml">
+      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.16 at 07h 39m 54s.xml">
       <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1184,23 +1183,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MovieLister.java">
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/MovieListerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        <state relative-caret-position="255">
+          <caret line="17" column="74" lean-forward="false" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
           <folding>
-            <element signature="e#147#148#0" expanded="true" />
-            <element signature="e#181#182#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/MovieListerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MovieLister.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="60" lean-forward="false" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+        <state relative-caret-position="235">
+          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#147#148#0" expanded="true" />
+            <element signature="e#181#182#0" expanded="true" />
           </folding>
         </state>
       </provider>
