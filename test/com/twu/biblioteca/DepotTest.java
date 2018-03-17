@@ -6,17 +6,20 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertTrue;
 
 public class DepotTest {
     Depot depot;
     ArrayList<UserAccount> fakeUsers;
     ArrayList<Movie> fakeMovies;
+    ArrayList<CheckOut> fakeCheckOuts;
 
     @Before
     public void setUp(){
         depot = new Depot();
         fakeUsers = depot.getUsersList();
         fakeMovies = depot.getMoviesList();
+        fakeCheckOuts = depot.getCheckOutsList();
     }
 
     @Test
@@ -31,5 +34,10 @@ public class DepotTest {
         assertEquals("theMovie0", fakeMovies.get(0).getName());
         assertEquals("theMovie1", fakeMovies.get(1).getName());
         assertEquals("theMovie2", fakeMovies.get(2).getName());
+    }
+
+    @Test
+    public void shouldHaveNoCheckOutsYet() {
+        assertEquals(0,fakeCheckOuts.size());
     }
 }

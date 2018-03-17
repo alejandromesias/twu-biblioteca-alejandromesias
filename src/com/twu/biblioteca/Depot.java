@@ -6,6 +6,7 @@ public class Depot {
 
     private ArrayList<UserAccount> usersList;
     private ArrayList<Movie> moviesList;
+    private ArrayList<CheckOut> checkOutsList = new ArrayList<CheckOut>();
 
     public Depot() {
         this.usersList = buildUsers();
@@ -18,6 +19,14 @@ public class Depot {
 
     public ArrayList<Movie> getMoviesList() {
         return moviesList;
+    }
+
+    public ArrayList<CheckOut> getCheckOutsList() {
+        return checkOutsList;
+    }
+
+    public void setCheckOutsList(ArrayList<CheckOut> checkOutsList) {
+        this.checkOutsList = checkOutsList;
     }
 
     private ArrayList<UserAccount> buildUsers(){
