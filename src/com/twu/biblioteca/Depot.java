@@ -29,6 +29,10 @@ public class Depot {
         this.checkOutsList = checkOutsList;
     }
 
+    public void addCheckout(CheckOut newCheckOut){
+        checkOutsList.add(newCheckOut);
+    }
+
     private ArrayList<UserAccount> buildUsers(){
         ArrayList<UserAccount> users = new ArrayList<UserAccount>();
         UserAccount user;
