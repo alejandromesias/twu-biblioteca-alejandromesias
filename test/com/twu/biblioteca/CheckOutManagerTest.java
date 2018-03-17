@@ -8,7 +8,7 @@ public class CheckOutManagerTest {
 
 
     @Test
-    public void shouldRegisterACheckOutToKnownUser() {
+    public void shouldRegisterACheckOutToKnownUser() throws WrongItemIdException{
         Depot depot = new Depot();
         UserAccount testUser = new UserAccount(2223333,
                 "Password1",
@@ -24,11 +24,7 @@ public class CheckOutManagerTest {
         CheckOut expectedCheckout = new CheckOut(testUser, testMovie);
         CheckOutManager manager = new CheckOutManager(depot);
 
-        try {
-            manager.performCheckOut(testUser, testMovie.getMovieId());
-        }catch(Exception exception){
-
-        }
+        manager.performCheckOut(testUser, testMovie.getMovieId());
 
         CheckOut newCheckout = depot.getCheckOutsList().get(0);
 
@@ -36,8 +32,8 @@ public class CheckOutManagerTest {
         assertEquals(expectedCheckout.getLentMovie(),newCheckout.getLentMovie());
     }
 
-    @Test
-    public void shouldThrowAnExceptionWhenInexistentMovieId() {
+    @Test(expected = WrongItemIdException.class)
+    public void shouldThrowAnExceptionWhenInexistentMovieId() throws WrongItemIdException{
         Depot depot = new Depot();
         UserAccount testUser = new UserAccount(2223333,
                 "Password1",
@@ -47,14 +43,6 @@ public class CheckOutManagerTest {
         int fakeMovieId = 100;
         CheckOutManager manager = new CheckOutManager(depot);
 
-        String message = "";
-        try {
-            manager.performCheckOut(testUser, fakeMovieId);
-        }catch(Exception exception){
-            message = exception.getMessage();
-        }
-
-        assertEquals("That movie is not available",message);
-
+        manager.performCheckOut(testUser, fakeMovieId);
     }
 }

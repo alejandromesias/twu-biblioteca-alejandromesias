@@ -10,20 +10,28 @@ public class UserAuthenticator {
         this.depot = depot;
     }
 
-    public UserAccount checkUserCredentials(int bibliotecaId, String password){
+    public UserAccount checkUserCredentials(int bibliotecaId, String password) throws WrongPasswordException, WrongIdException{
         ArrayList<UserAccount> usersList = depot.getUsersList();
 
         for (UserAccount user : usersList) {
             boolean usersIdMatch = bibliotecaId == user.getBibliotecaId();
-            if(usersIdMatch){
+            if(usersIdMatch) {
                 boolean passwordMatch = password.equals(user.getPassword());
-                if(passwordMatch){
+                if (passwordMatch) {
                     this.activeUser = user;
+                } else {
+                    throw new WrongPasswordException("Wrong Password!");
                 }
+                break;
             }
         }
-        return  activeUser;
+        if(activeUser != null) {
+            return activeUser;
+        }else{
+            throw new WrongIdException("Wrong ID!");
+        }
     }
+
 
     public UserAccount getCurrentActiveUser() {
         return activeUser;

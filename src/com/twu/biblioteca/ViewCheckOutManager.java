@@ -25,22 +25,25 @@ public class ViewCheckOutManager implements Task {
             int bibliotecaId = Integer.parseInt(scanner.next());
             System.out.println("Please enter your password:");
             String password = scanner.next();
-            UserAccount verifyedUser = authenticator.checkUserCredentials(bibliotecaId,password);
+            UserAccount verifiedUser = authenticator.checkUserCredentials(bibliotecaId,password);
             try {
                 System.out.println("Please enter the Id of the Movie to Checkout:");
                 int movieId = Integer.parseInt(scanner.next());
-                checkOutManager.performCheckOut(verifyedUser,movieId);
+                checkOutManager.performCheckOut(verifiedUser,movieId);
+                System.out.println("Thank you Enjoy!");
             }
             catch(NumberFormatException exception){
                 System.out.println("Invalid movie ID format");
             }
-            catch(Exception excepction){
-                excepction.getMessage();
+            catch(WrongItemIdException exception){
+                System.out.println(exception.getMessage());
             }
         }catch(NumberFormatException exception){
             System.out.println("Invalid biblioteca ID format");
-        }catch(NullPointerException exception){
-            System.out.println("Invalid credentials");
+        }catch(WrongIdException wrongId){
+            System.out.println(wrongId.getMessage());
+        }catch(WrongPasswordException wrongPassword){
+            System.out.println(wrongPassword.getMessage());
         }
     }
 }

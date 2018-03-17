@@ -9,18 +9,19 @@ public class CheckOutManager {
         this.depot = depot;
     }
 
-    public void performCheckOut(UserAccount user, int movieId) throws Exception {
+    public boolean performCheckOut(UserAccount user, int movieId) throws WrongItemIdException{
         ArrayList<Movie> movieList = depot.getMoviesList();
 
         for (Movie movie : movieList) {
             boolean movieIdMatch = movieId == movie.getMovieId();
-            if(movieIdMatch){
-                CheckOut checkOut = new CheckOut(user,movie);
+            if(movieIdMatch) {
+                CheckOut checkOut = new CheckOut(user, movie);
                 depot.addCheckout(checkOut);
-            }else{
-                throw new Exception("That movie is not available");
+                return true;
             }
         }
+        throw new WrongItemIdException("That movie is not in inventory");
     }
+
 
 }
