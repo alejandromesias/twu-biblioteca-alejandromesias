@@ -10,7 +10,7 @@ public class MovieLister {
     }
 
     public String getMoviesList(){
-        ArrayList<Movie> MoviesList = depot.getMoviesList();
+        ArrayList<Movie> MoviesList = getAvailableMoviesList();
 
         String listAsText;
 
@@ -36,5 +36,30 @@ public class MovieLister {
             return Integer.toString(rating);
         }
         return "unrated";
+    }
+
+
+    public ArrayList<Movie> getAvailableMoviesList() {
+        ArrayList<Movie> availableMovies = new ArrayList<>();
+        ArrayList<Movie> allMovies = depot.getMoviesList();
+
+        for (Movie movie : allMovies) {
+            boolean isAvailable = !isInCheckOuts(movie);
+            if(isAvailable){
+                availableMovies.add(movie);
+            }
+        }
+        return availableMovies;
+    }
+
+    private boolean isInCheckOuts(Movie movie){
+        ArrayList<CheckOut> allCheckOuts = depot.getCheckOutsList();
+        for(CheckOut checkOut: allCheckOuts){
+            boolean movieMatch = movie.equals(checkOut.getLentMovie());
+            if(movieMatch){
+                return true;
+            }
+        }
+        return false;
     }
 }

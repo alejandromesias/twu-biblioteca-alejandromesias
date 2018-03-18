@@ -2,11 +2,13 @@ package com.twu.biblioteca;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static junit.framework.TestCase.assertEquals;
 
 public class MovieListerTest {
     @Test
-    public void shouldReturnAListOfMovies() {
+    public void shouldReturnATextOfMovies() {
         Depot depot = new Depot();
         MovieLister movieLister = new MovieLister(depot);
 
@@ -19,5 +21,22 @@ public class MovieListerTest {
         String expectedList = header + row0 + row1 + row2;
 
         assertEquals(expectedList,moviesList);
+    }
+
+    @Test
+    public void shouldReturnAnArrayOfOnlyAvailableMovies() {
+        Depot depot = new Depot();
+        UserAccount aUser = depot.getUsersList().get(0);
+        Movie firstMovie = depot.getMoviesList().get(0);
+        Movie secondMovie = depot.getMoviesList().get(1);
+        CheckOut firstCheckOut = new CheckOut(aUser,firstMovie);
+        CheckOut secondCheckOut = new CheckOut(aUser,secondMovie);
+        depot.addCheckout(firstCheckOut);
+        depot.addCheckout(secondCheckOut);
+
+        MovieLister movieLister = new MovieLister(depot);
+        ArrayList<Movie> availableMovies = movieLister.getAvailableMoviesList();
+
+        assertEquals(depot.getMoviesList().get(2),availableMovies.get(0));
     }
 }
