@@ -1,5 +1,9 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.Controllers.UserAuthenticator;
+import com.twu.biblioteca.Exceptions.WrongIdException;
+import com.twu.biblioteca.Exceptions.WrongPasswordException;
+import com.twu.biblioteca.Types.UserAccount;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;

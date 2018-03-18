@@ -1,4 +1,7 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Views;
+
+import com.twu.biblioteca.Depot;
+import com.twu.biblioteca.Types.MenuOption;
 
 import java.util.ArrayList;
 import java.util.Scanner;

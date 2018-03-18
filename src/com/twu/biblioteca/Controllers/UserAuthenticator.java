@@ -1,4 +1,9 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Controllers;
+
+import com.twu.biblioteca.Depot;
+import com.twu.biblioteca.Exceptions.WrongIdException;
+import com.twu.biblioteca.Exceptions.WrongPasswordException;
+import com.twu.biblioteca.Types.UserAccount;
 
 import java.util.ArrayList;
 
@@ -10,7 +15,7 @@ public class UserAuthenticator {
         this.depot = depot;
     }
 
-    public UserAccount checkUserCredentials(int bibliotecaId, String password) throws WrongPasswordException, WrongIdException{
+    public UserAccount checkUserCredentials(int bibliotecaId, String password) throws WrongPasswordException, WrongIdException {
         ArrayList<UserAccount> usersList = depot.getUsersList();
 
         for (UserAccount user : usersList) {

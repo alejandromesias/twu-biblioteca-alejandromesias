@@ -1,6 +1,6 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Views;
 
-public class Quiter implements Task{
+public class Quiter implements Task {
     @Override
     public void execute() {
         System.out.println("Thank you, bye");

@@ -1,5 +1,8 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.Views.Task;
+import com.twu.biblioteca.Views.TaskFactory;
+
 import java.util.Scanner;
 
 public class BibliotecaApp {
@@ -7,12 +10,11 @@ public class BibliotecaApp {
     public static boolean stopApp;
 
     public static void main(String[] args) {
-        ViewMessagesBiblio viewMessagesBiblio = new ViewMessagesBiblio();
         Depot depot = new Depot();
         Scanner scanner = new Scanner(System.in);
         TaskFactory taskFactory = new TaskFactory(depot,scanner);
 
-        viewMessagesBiblio.welcome();
+        System.out.println("Welcome to Biblioteca! Enjoy");
         while(true) {
             System.out.println("--------------");
             System.out.println(taskFactory.toString());

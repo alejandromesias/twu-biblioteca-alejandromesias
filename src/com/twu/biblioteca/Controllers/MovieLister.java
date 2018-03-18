@@ -1,4 +1,8 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Controllers;
+
+import com.twu.biblioteca.Depot;
+import com.twu.biblioteca.Types.CheckOut;
+import com.twu.biblioteca.Types.Movie;
 
 import java.util.ArrayList;
 

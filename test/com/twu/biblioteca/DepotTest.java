@@ -1,5 +1,8 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.Types.CheckOut;
+import com.twu.biblioteca.Types.Movie;
+import com.twu.biblioteca.Types.UserAccount;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,4 +1,12 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Views;
+
+import com.twu.biblioteca.*;
+import com.twu.biblioteca.Controllers.CheckOutManager;
+import com.twu.biblioteca.Controllers.UserAuthenticator;
+import com.twu.biblioteca.Exceptions.WrongIdException;
+import com.twu.biblioteca.Exceptions.WrongItemIdException;
+import com.twu.biblioteca.Exceptions.WrongPasswordException;
+import com.twu.biblioteca.Types.UserAccount;
 
 import java.util.Scanner;
 

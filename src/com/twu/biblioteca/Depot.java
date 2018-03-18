@@ -1,5 +1,9 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.Types.CheckOut;
+import com.twu.biblioteca.Types.Movie;
+import com.twu.biblioteca.Types.UserAccount;
+
 import java.util.ArrayList;
 
 public class Depot {

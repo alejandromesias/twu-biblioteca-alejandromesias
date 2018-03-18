@@ -1,5 +1,9 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.Controllers.MovieLister;
+import com.twu.biblioteca.Types.CheckOut;
+import com.twu.biblioteca.Types.Movie;
+import com.twu.biblioteca.Types.UserAccount;
 import org.junit.Test;
 
 import java.util.ArrayList;

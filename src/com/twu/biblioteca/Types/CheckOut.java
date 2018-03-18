@@ -1,4 +1,4 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Types;
 
 public class CheckOut {
     private UserAccount userAccount;

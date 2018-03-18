@@ -1,8 +1,14 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Views;
+
+import com.twu.biblioteca.Depot;
+import com.twu.biblioteca.Exceptions.WrongIdException;
+import com.twu.biblioteca.Exceptions.WrongPasswordException;
+import com.twu.biblioteca.Types.UserAccount;
+import com.twu.biblioteca.Controllers.UserAuthenticator;
 
 import java.util.Scanner;
 
-public class ViewUserInfo implements Task{
+public class ViewUserInfo implements Task {
     private Depot depot;
     private Scanner scanner;
 

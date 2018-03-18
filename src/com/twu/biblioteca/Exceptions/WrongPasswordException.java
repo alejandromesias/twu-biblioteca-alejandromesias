@@ -1,4 +1,4 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Exceptions;
 
 public class WrongPasswordException extends Exception{
 

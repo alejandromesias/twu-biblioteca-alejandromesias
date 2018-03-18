@@ -1,5 +1,10 @@
 package com.twu.biblioteca;
 
+import com.twu.biblioteca.Controllers.CheckOutManager;
+import com.twu.biblioteca.Exceptions.WrongItemIdException;
+import com.twu.biblioteca.Types.CheckOut;
+import com.twu.biblioteca.Types.Movie;
+import com.twu.biblioteca.Types.UserAccount;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
@@ -8,7 +13,7 @@ public class CheckOutManagerTest {
 
 
     @Test
-    public void shouldRegisterACheckOutToKnownUser() throws WrongItemIdException{
+    public void shouldRegisterACheckOutToKnownUser() throws WrongItemIdException {
         Depot depot = new Depot();
         UserAccount testUser = new UserAccount(2223333,
                 "Password1",

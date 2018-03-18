@@ -1,4 +1,10 @@
-package com.twu.biblioteca;
+package com.twu.biblioteca.Controllers;
+
+import com.twu.biblioteca.Depot;
+import com.twu.biblioteca.Exceptions.WrongItemIdException;
+import com.twu.biblioteca.Types.CheckOut;
+import com.twu.biblioteca.Types.Movie;
+import com.twu.biblioteca.Types.UserAccount;
 
 import java.util.ArrayList;
 
@@ -9,7 +15,7 @@ public class CheckOutManager {
         this.depot = depot;
     }
 
-    public boolean performCheckOut(UserAccount user, int movieId) throws WrongItemIdException{
+    public boolean performCheckOut(UserAccount user, int movieId) throws WrongItemIdException {
         ArrayList<Movie> movieList = depot.getMoviesList();
 
         for (Movie movie : movieList) {
