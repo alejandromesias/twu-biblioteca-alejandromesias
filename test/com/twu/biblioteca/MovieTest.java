@@ -10,7 +10,7 @@ public class MovieTest {
     private Movie aMovie;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         aMovie = new Movie(888, "testName",
                 "testDirector", 2000,
                 10);

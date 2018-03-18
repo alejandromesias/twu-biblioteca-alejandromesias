@@ -20,7 +20,7 @@ public class UserAuthenticator {
 
         for (UserAccount user : usersList) {
             boolean usersIdMatch = bibliotecaId == user.getBibliotecaId();
-            if(usersIdMatch) {
+            if (usersIdMatch) {
                 boolean passwordMatch = password.equals(user.getPassword());
                 if (passwordMatch) {
                     this.activeUser = user;
@@ -30,9 +30,9 @@ public class UserAuthenticator {
                 break;
             }
         }
-        if(activeUser != null) {
+        if (activeUser != null) {
             return activeUser;
-        }else{
+        } else {
             throw new WrongIdException("Wrong ID!");
         }
     }

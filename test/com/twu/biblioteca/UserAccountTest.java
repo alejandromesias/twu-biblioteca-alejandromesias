@@ -11,7 +11,7 @@ public class UserAccountTest {
     private UserAccount oneUserAccount;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         oneUserAccount = new UserAccount(1231234,
                 "TestPassword!",
                 "testName",
@@ -34,6 +34,6 @@ public class UserAccountTest {
 
         String userPrint = oneUserAccount.toString();
 
-        assertEquals(expectedUserPrint,userPrint);
+        assertEquals(expectedUserPrint, userPrint);
     }
 }

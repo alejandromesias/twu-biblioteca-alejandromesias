@@ -19,13 +19,15 @@ public class TaskFactory {
 
     public Task getRequestedTask(String option) throws Exception {
 
-        switch (option){
+        switch (option) {
             case "a":
                 return new ViewMovieLister(depot);
             case "b":
-                return new ViewCheckOutManager(depot,scanner);
+                return new ViewCheckOutManager(depot, scanner);
+            case "c":
+                return new ViewRestoreManager(depot, scanner);
             case "u":
-                return new ViewUserInfo(depot,scanner);
+                return new ViewUserInfo(depot, scanner);
             case "q":
                 return new Quiter();
             default:

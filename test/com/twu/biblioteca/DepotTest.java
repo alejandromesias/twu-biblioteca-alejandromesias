@@ -18,7 +18,7 @@ public class DepotTest {
     ArrayList<CheckOut> fakeCheckOuts;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         depot = new Depot();
         fakeUsers = depot.getUsersList();
         fakeMovies = depot.getMoviesList();
@@ -41,6 +41,6 @@ public class DepotTest {
 
     @Test
     public void shouldHaveNoCheckOutsYet() {
-        assertEquals(0,fakeCheckOuts.size());
+        assertEquals(0, fakeCheckOuts.size());
     }
 }

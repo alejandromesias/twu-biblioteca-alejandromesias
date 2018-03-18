@@ -12,10 +12,10 @@ public class BibliotecaApp {
     public static void main(String[] args) {
         Depot depot = new Depot();
         Scanner scanner = new Scanner(System.in);
-        TaskFactory taskFactory = new TaskFactory(depot,scanner);
+        TaskFactory taskFactory = new TaskFactory(depot, scanner);
 
         System.out.println("Welcome to Biblioteca! Enjoy");
-        while(true) {
+        while (true) {
             System.out.println("--------------");
             System.out.println(taskFactory.toString());
             System.out.println("choose an option");

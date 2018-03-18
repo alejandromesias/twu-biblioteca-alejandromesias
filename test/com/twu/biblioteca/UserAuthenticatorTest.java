@@ -32,7 +32,7 @@ public class UserAuthenticatorTest {
     }
 
     @Test
-    public void shouldTellTheActiveLoggedUser() throws WrongPasswordException, WrongIdException{
+    public void shouldTellTheActiveLoggedUser() throws WrongPasswordException, WrongIdException {
         Depot depot = new Depot();
         UserAccount expectedUser = new UserAccount(2223333,
                 "Password1",
@@ -43,7 +43,7 @@ public class UserAuthenticatorTest {
         int testBibliotecaId = 2223333;
         String testPassword = "Password1";
 
-        authenticator.checkUserCredentials(testBibliotecaId,testPassword);
+        authenticator.checkUserCredentials(testBibliotecaId, testPassword);
         UserAccount activeUser = authenticator.getCurrentActiveUser();
         assertEquals(expectedUser, activeUser);
 

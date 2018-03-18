@@ -13,13 +13,13 @@ public class MovieLister {
         this.depot = depot;
     }
 
-    public String getMoviesList(){
+    public String getMoviesList() {
         ArrayList<Movie> MoviesList = getAvailableMoviesList();
 
         String listAsText;
 
         String fourColumnsFormat = "%-5s%-15s%-15s%-5s%-10s%n";
-        String header = String.format(fourColumnsFormat,"ID","Movie Name","Director","Year","Rating");
+        String header = String.format(fourColumnsFormat, "ID", "Movie Name", "Director", "Year", "Rating");
         String body = "";
         for (Movie movie : MoviesList) {
             body = body + String.format(
@@ -35,8 +35,8 @@ public class MovieLister {
         return listAsText;
     }
 
-    private String validateRatingToPrint(int rating){
-        if(rating > 0 && rating <= 10){
+    private String validateRatingToPrint(int rating) {
+        if (rating > 0 && rating <= 10) {
             return Integer.toString(rating);
         }
         return "unrated";
@@ -49,18 +49,18 @@ public class MovieLister {
 
         for (Movie movie : allMovies) {
             boolean isAvailable = !isInCheckOuts(movie);
-            if(isAvailable){
+            if (isAvailable) {
                 availableMovies.add(movie);
             }
         }
         return availableMovies;
     }
 
-    private boolean isInCheckOuts(Movie movie){
+    private boolean isInCheckOuts(Movie movie) {
         ArrayList<CheckOut> allCheckOuts = depot.getCheckOutsList();
-        for(CheckOut checkOut: allCheckOuts){
+        for (CheckOut checkOut : allCheckOuts) {
             boolean movieMatch = movie.equals(checkOut.getLentMovie());
-            if(movieMatch){
+            if (movieMatch) {
                 return true;
             }
         }

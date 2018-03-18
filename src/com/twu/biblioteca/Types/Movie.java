@@ -52,13 +52,13 @@ public class Movie {
     public boolean equals(Object obj) {
 
         Movie movie = (Movie) obj;
-        if(movie.getMovieId() == this.getMovieId() &&
+        if (movie.getMovieId() == this.getMovieId() &&
                 movie.getName().equals(this.getName()) &&
                 movie.getDirector().equals(this.getDirector()) &&
                 movie.getYear() == (this.getYear())
-                ){
+                ) {
             return true;
-        }else {
+        } else {
             return super.equals(obj);
         }
     }

@@ -11,7 +11,6 @@ import static junit.framework.TestCase.assertEquals;
 
 public class CheckOutManagerTest {
 
-
     @Test
     public void shouldRegisterACheckOutToKnownUser() throws WrongItemIdException {
         Depot depot = new Depot();
@@ -33,12 +32,12 @@ public class CheckOutManagerTest {
 
         CheckOut newCheckout = depot.getCheckOutsList().get(0);
 
-        assertEquals(expectedCheckout.getUserAccount(),newCheckout.getUserAccount());
-        assertEquals(expectedCheckout.getLentMovie(),newCheckout.getLentMovie());
+        assertEquals(expectedCheckout.getUserAccount(), newCheckout.getUserAccount());
+        assertEquals(expectedCheckout.getLentMovie(), newCheckout.getLentMovie());
     }
 
     @Test(expected = WrongItemIdException.class)
-    public void shouldThrowAnExceptionWhenInexistentMovieId() throws WrongItemIdException{
+    public void shouldThrowAnExceptionWhenInexistentMovieId() throws WrongItemIdException {
         Depot depot = new Depot();
         UserAccount testUser = new UserAccount(2223333,
                 "Password1",

@@ -33,11 +33,11 @@ public class Depot {
         this.checkOutsList = checkOutsList;
     }
 
-    public void addCheckout(CheckOut newCheckOut){
+    public void addCheckout(CheckOut newCheckOut) {
         checkOutsList.add(newCheckOut);
     }
 
-    private ArrayList<UserAccount> buildUsers(){
+    private ArrayList<UserAccount> buildUsers() {
         ArrayList<UserAccount> users = new ArrayList<UserAccount>();
         UserAccount user;
         user = new UserAccount(1112222,
@@ -62,7 +62,7 @@ public class Depot {
         return users;
     }
 
-    private ArrayList<Movie> buildMovies(){
+    private ArrayList<Movie> buildMovies() {
         ArrayList<Movie> movies = new ArrayList<Movie>();
         Movie movie;
         movie = new Movie(3,

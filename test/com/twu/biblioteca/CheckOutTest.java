@@ -11,18 +11,18 @@ import static org.junit.Assert.assertEquals;
 public class CheckOutTest {
 
     @Test
-    public void shouldHaveCreatedACheckOut(){
-       UserAccount oneUserAccount = new UserAccount(1231234,
-                    "TestPassword!",
-                    "testName",
-                    "testName@email.com",
-                    "0986424406");
+    public void shouldHaveCreatedACheckOut() {
+        UserAccount oneUserAccount = new UserAccount(1231234,
+                "TestPassword!",
+                "testName",
+                "testName@email.com",
+                "0986424406");
 
-       Movie aMovie = new Movie(888, "testName",
+        Movie aMovie = new Movie(888, "testName",
                 "testDirector", 2000,
                 10);
 
-       CheckOut aCheckOut = new CheckOut(oneUserAccount, aMovie);
+        CheckOut aCheckOut = new CheckOut(oneUserAccount, aMovie);
 
         assertEquals(oneUserAccount, aCheckOut.getUserAccount());
         assertEquals(aMovie, aCheckOut.getLentMovie());

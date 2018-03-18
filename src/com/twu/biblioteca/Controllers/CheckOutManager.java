@@ -20,7 +20,7 @@ public class CheckOutManager {
 
         for (Movie movie : movieList) {
             boolean movieIdMatch = movieId == movie.getMovieId();
-            if(movieIdMatch) {
+            if (movieIdMatch) {
                 CheckOut checkOut = new CheckOut(user, movie);
                 depot.addCheckout(checkOut);
                 return true;

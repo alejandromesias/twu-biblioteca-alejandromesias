@@ -1,6 +1,6 @@
 package com.twu.biblioteca.Types;
 
-public class UserAccount{
+public class UserAccount {
     private int bibliotecaId;
     private String password;
     private String userName;
@@ -64,21 +64,20 @@ public class UserAccount{
     public boolean equals(Object obj) {
 
         UserAccount user = (UserAccount) obj;
-        if(user.getBibliotecaId() == this.getBibliotecaId() &&
+        if (user.getBibliotecaId() == this.getBibliotecaId() &&
                 user.getUserName().equals(this.getUserName()) &&
                 user.getUserEmail().equals(this.getUserEmail()) &&
                 user.getUserPhone().equals(this.getUserPhone())
-                ){
+                ) {
             return true;
-        }
-        else{
+        } else {
             return super.equals(obj);
         }
 
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         String format = "user name: %s%nemail: %s%nphone: %s";
         String printedUser = String.format(format,
                 this.userName,
