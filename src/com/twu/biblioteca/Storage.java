@@ -1,9 +1,6 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.Types.CheckOut;
-import com.twu.biblioteca.Types.Item;
-import com.twu.biblioteca.Types.Movie;
-import com.twu.biblioteca.Types.UserAccount;
+import com.twu.biblioteca.Types.*;
 
 import java.util.ArrayList;
 
@@ -105,26 +102,24 @@ public class Storage {
     }
 
     private ArrayList<Item> buildBooks() {
-        ArrayList<Item> movies = new ArrayList<Item>();
-        Movie movie;
-        movie = new Movie(3,
+        ArrayList<Item> books = new ArrayList<Item>();
+        Book book;
+        book = new Book(2,
                 "theBook0",
-                "Director0",
-                2010,
-                10);
-        movies.add(movie);
-        movie = new Movie(4,
+                "Author0",
+                2000);
+        books.add(book);
+        book = new Book(3,
                 "theBook1",
-                "Director1",
-                2011,
-                9);
-        movies.add(movie);
-        movie = new Movie(5,
+                "Author1",
+                2001);
+        books.add(book);
+        book = new Book (4,
                 "theBook2",
-                "Director2",
-                2012);
-        movies.add(movie);
+                "Author2",
+                2002);
+        books.add(book);
 
-        return movies;
+        return books;
     }
 }

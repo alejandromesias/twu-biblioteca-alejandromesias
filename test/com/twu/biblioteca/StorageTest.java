@@ -16,6 +16,7 @@ public class StorageTest {
     Storage storage;
     ArrayList<UserAccount> fakeUsers;
     ArrayList<Item> fakeMovies;
+    ArrayList<Item> fakeBooks;
     ArrayList<CheckOut> fakeCheckOuts;
 
     @Before
@@ -23,6 +24,7 @@ public class StorageTest {
         storage = new Storage();
         fakeUsers = storage.getUsersList();
         fakeMovies = storage.getMoviesList();
+        fakeBooks = storage.getBooksList();
         fakeCheckOuts = storage.getCheckOutsList();
     }
 
@@ -38,6 +40,13 @@ public class StorageTest {
         assertEquals("theMovie0", fakeMovies.get(0).getName());
         assertEquals("theMovie1", fakeMovies.get(1).getName());
         assertEquals("theMovie2", fakeMovies.get(2).getName());
+    }
+
+    @Test
+    public void shouldHaveTheFakeBooks() {
+        assertEquals("theBook0", fakeBooks.get(0).getName());
+        assertEquals("theBook1", fakeBooks.get(1).getName());
+        assertEquals("theBook2", fakeBooks.get(2).getName());
     }
 
     @Test
