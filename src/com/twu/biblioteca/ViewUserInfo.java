@@ -13,6 +13,22 @@ public class ViewUserInfo implements Task{
 
     @Override
     public void execute() {
-        System.out.println("Here goes the User INfo");
+        UserAuthenticator authenticator = new UserAuthenticator(depot);
+
+        System.out.println("** User Information **");
+        try {
+            System.out.println("Please Enter your Id:");
+            int bibliotecaId = Integer.parseInt(scanner.next());
+            System.out.println("Please enter your password:");
+            String password = scanner.next();
+            UserAccount verifiedUser = authenticator.checkUserCredentials(bibliotecaId, password);
+            System.out.println(verifiedUser.toString());
+        } catch (NumberFormatException exception) {
+            System.out.println("Invalid biblioteca ID format");
+        } catch (WrongIdException wrongId) {
+            System.out.println(wrongId.getMessage());
+        } catch (WrongPasswordException wrongPassword) {
+            System.out.println(wrongPassword.getMessage());
+        }
     }
 }
