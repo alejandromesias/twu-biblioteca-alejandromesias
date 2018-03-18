@@ -1,8 +1,5 @@
 package com.twu.biblioteca;
 
-import javax.jws.soap.SOAPBinding;
-import java.net.Authenticator;
-import java.text.ParseException;
 import java.util.Scanner;
 
 public class ViewCheckOutManager implements Task {
