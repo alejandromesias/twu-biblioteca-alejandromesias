@@ -7,9 +7,6 @@ public class BibliotecaApp {
     public static boolean stopApp;
 
     public static void main(String[] args) {
-
-
-        //ViewMainMenu viewMainMenu = new ViewMainMenu(scanner);
         ViewMessagesBiblio viewMessagesBiblio = new ViewMessagesBiblio();
         Depot depot = new Depot();
         Scanner scanner = new Scanner(System.in);
@@ -17,6 +14,8 @@ public class BibliotecaApp {
 
         viewMessagesBiblio.welcome();
         while(true) {
+            System.out.println("--------------");
+            System.out.println(taskFactory.toString());
             System.out.println("choose an option");
             String input = scanner.next();
             try {
@@ -27,13 +26,5 @@ public class BibliotecaApp {
             }
         }
     }
-
-        /*while(!stopApp) {
-            System.out.println("--------------");
-
-            //viewMainMenu.display();
-
-            //viewMainMenu.getAndDisplayUsersChoice();
-        }*/
 
 }
