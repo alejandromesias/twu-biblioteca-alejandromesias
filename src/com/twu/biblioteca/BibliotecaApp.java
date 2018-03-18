@@ -10,9 +10,9 @@ public class BibliotecaApp {
     public static boolean stopApp;
 
     public static void main(String[] args) {
-        Depot depot = new Depot();
+        Storage storage = new Storage();
         Scanner scanner = new Scanner(System.in);
-        TaskFactory taskFactory = new TaskFactory(depot, scanner);
+        TaskFactory taskFactory = new TaskFactory(storage, scanner);
 
         System.out.println("Welcome to Biblioteca! Enjoy");
         while (true) {

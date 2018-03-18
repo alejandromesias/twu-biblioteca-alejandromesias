@@ -11,18 +11,18 @@ import java.util.ArrayList;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
-public class DepotTest {
-    Depot depot;
+public class StorageTest {
+    Storage storage;
     ArrayList<UserAccount> fakeUsers;
     ArrayList<Movie> fakeMovies;
     ArrayList<CheckOut> fakeCheckOuts;
 
     @Before
     public void setUp() {
-        depot = new Depot();
-        fakeUsers = depot.getUsersList();
-        fakeMovies = depot.getMoviesList();
-        fakeCheckOuts = depot.getCheckOutsList();
+        storage = new Storage();
+        fakeUsers = storage.getUsersList();
+        fakeMovies = storage.getMoviesList();
+        fakeCheckOuts = storage.getCheckOutsList();
     }
 
     @Test

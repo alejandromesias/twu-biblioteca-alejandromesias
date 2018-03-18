@@ -15,18 +15,33 @@ public class RestoreManagerTest {
 
     @Test
     public void shouldRestoreAnItemFromKnownUser() throws WrongItemIdException {
-        Depot depot = new Depot();
-        UserAccount aUser = depot.getUsersList().get(0);
-        Movie aMovie = depot.getMoviesList().get(0);
+        Storage storage = new Storage();
+        UserAccount aUser = storage.getUsersList().get(1);
+        Movie aMovie = storage.getMoviesList().get(1);
+        int movieId = aMovie.getMovieId();
         CheckOut firstCheckOut = new CheckOut(aUser, aMovie);
-        depot.addCheckout(firstCheckOut);
+        storage.addCheckout(firstCheckOut);
 
-        assertEquals(1,depot.getCheckOutsList().size());
+        assertEquals(1,storage.getCheckOutsList().size());
 
-        RestoreManager restoreManager = new RestoreManager(depot);
-        restoreManager.performRestore(aUser,aMovie);
+        RestoreManager restoreManager = new RestoreManager(storage);
+        restoreManager.performRestore(aUser,movieId);
 
-        assertEquals(0,depot.getCheckOutsList().size());
+        assertEquals(0,storage.getCheckOutsList().size());
+    }
+
+    @Test(expected = WrongItemIdException.class)
+    public void shouldThrowAnExceptionWhenInexistentMovieId() throws WrongItemIdException {
+        Storage storage = new Storage();
+        UserAccount testUser = new UserAccount(2223333,
+                "Password1",
+                "User1",
+                "user1@email.com",
+                "0888888888");
+        int fakeMovieId = 100;
+        RestoreManager manager = new RestoreManager(storage);
+
+        manager.performRestore(testUser, fakeMovieId);
     }
 
 }

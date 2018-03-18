@@ -1,18 +1,18 @@
 package com.twu.biblioteca.Views;
 
-import com.twu.biblioteca.Depot;
+import com.twu.biblioteca.Storage;
 import com.twu.biblioteca.Types.MenuOption;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TaskFactory {
-    private Depot depot;
+    private Storage storage;
     private Scanner scanner;
     private ArrayList<MenuOption> optionsList;
 
-    public TaskFactory(Depot depot, Scanner scanner) {
-        this.depot = depot;
+    public TaskFactory(Storage storage, Scanner scanner) {
+        this.storage = storage;
         this.scanner = scanner;
         this.optionsList = buildOptions();
     }
@@ -21,13 +21,13 @@ public class TaskFactory {
 
         switch (option) {
             case "a":
-                return new ViewMovieLister(depot);
+                return new ViewMovieLister(storage);
             case "b":
-                return new ViewCheckOutManager(depot, scanner);
+                return new ViewCheckOutManager(storage, scanner);
             case "c":
-                return new ViewRestoreManager(depot, scanner);
+                return new ViewRestoreManager(storage, scanner);
             case "u":
-                return new ViewUserInfo(depot, scanner);
+                return new ViewUserInfo(storage, scanner);
             case "q":
                 return new Quiter();
             default:

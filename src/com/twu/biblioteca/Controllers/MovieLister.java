@@ -1,16 +1,16 @@
 package com.twu.biblioteca.Controllers;
 
-import com.twu.biblioteca.Depot;
+import com.twu.biblioteca.Storage;
 import com.twu.biblioteca.Types.CheckOut;
 import com.twu.biblioteca.Types.Movie;
 
 import java.util.ArrayList;
 
 public class MovieLister {
-    private Depot depot;
+    private Storage storage;
 
-    public MovieLister(Depot depot) {
-        this.depot = depot;
+    public MovieLister(Storage storage) {
+        this.storage = storage;
     }
 
     public String getMoviesList() {
@@ -45,7 +45,7 @@ public class MovieLister {
 
     public ArrayList<Movie> getAvailableMoviesList() {
         ArrayList<Movie> availableMovies = new ArrayList<>();
-        ArrayList<Movie> allMovies = depot.getMoviesList();
+        ArrayList<Movie> allMovies = storage.getMoviesList();
 
         for (Movie movie : allMovies) {
             boolean isAvailable = !isInCheckOuts(movie);
@@ -57,7 +57,7 @@ public class MovieLister {
     }
 
     private boolean isInCheckOuts(Movie movie) {
-        ArrayList<CheckOut> allCheckOuts = depot.getCheckOutsList();
+        ArrayList<CheckOut> allCheckOuts = storage.getCheckOutsList();
         for (CheckOut checkOut : allCheckOuts) {
             boolean movieMatch = movie.equals(checkOut.getLentMovie());
             if (movieMatch) {

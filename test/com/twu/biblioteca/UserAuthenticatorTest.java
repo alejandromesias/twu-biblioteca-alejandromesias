@@ -15,14 +15,14 @@ public class UserAuthenticatorTest {
 
     @Test
     public void shouldRecognizeUserByCredentials() throws WrongIdException, WrongPasswordException {
-        Depot depot = new Depot();
+        Storage storage = new Storage();
         UserAccount expectedUser = new UserAccount(2223333,
                 "Password1",
                 "User1",
                 "user1@email.com",
                 "0888888888");
 
-        UserAuthenticator authenticator = new UserAuthenticator(depot);
+        UserAuthenticator authenticator = new UserAuthenticator(storage);
         int testBibliotecaId = 2223333;
         String testPassword = "Password1";
 
@@ -33,13 +33,13 @@ public class UserAuthenticatorTest {
 
     @Test
     public void shouldTellTheActiveLoggedUser() throws WrongPasswordException, WrongIdException {
-        Depot depot = new Depot();
+        Storage storage = new Storage();
         UserAccount expectedUser = new UserAccount(2223333,
                 "Password1",
                 "User1",
                 "user1@email.com",
                 "0888888888");
-        UserAuthenticator authenticator = new UserAuthenticator(depot);
+        UserAuthenticator authenticator = new UserAuthenticator(storage);
         int testBibliotecaId = 2223333;
         String testPassword = "Password1";
 
@@ -51,8 +51,8 @@ public class UserAuthenticatorTest {
 
     @Test(expected = WrongIdException.class)
     public void shouldRejectUserCauseWrongId() throws WrongIdException, WrongPasswordException {
-        Depot depot = new Depot();
-        UserAuthenticator authenticator = new UserAuthenticator(depot);
+        Storage storage = new Storage();
+        UserAuthenticator authenticator = new UserAuthenticator(storage);
         int testBibliotecaId = 0112222;
         String testPassword = "Password1";
 
@@ -61,8 +61,8 @@ public class UserAuthenticatorTest {
 
     @Test(expected = WrongPasswordException.class)
     public void shouldRejectUserCauseWrongPassword() throws WrongIdException, WrongPasswordException {
-        Depot depot = new Depot();
-        UserAuthenticator authenticator = new UserAuthenticator(depot);
+        Storage storage = new Storage();
+        UserAuthenticator authenticator = new UserAuthenticator(storage);
         int testBibliotecaId = 2223333;
         String testPassword = "Password8";
         String message1 = "";

@@ -1,18 +1,18 @@
 package com.twu.biblioteca.Views;
 
-import com.twu.biblioteca.Depot;
+import com.twu.biblioteca.Storage;
 import com.twu.biblioteca.Controllers.MovieLister;
 
 public class ViewMovieLister implements Task {
-    Depot depot;
+    Storage storage;
 
-    public ViewMovieLister(Depot depot) {
-        this.depot = depot;
+    public ViewMovieLister(Storage storage) {
+        this.storage = storage;
     }
 
     @Override
     public void execute() {
-        MovieLister movieLister = new MovieLister(depot);
+        MovieLister movieLister = new MovieLister(storage);
         System.out.println(movieLister.getMoviesList());
     }
 }

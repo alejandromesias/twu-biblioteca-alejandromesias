@@ -1,6 +1,6 @@
 package com.twu.biblioteca.Controllers;
 
-import com.twu.biblioteca.Depot;
+import com.twu.biblioteca.Storage;
 import com.twu.biblioteca.Exceptions.WrongIdException;
 import com.twu.biblioteca.Exceptions.WrongPasswordException;
 import com.twu.biblioteca.Types.UserAccount;
@@ -8,15 +8,15 @@ import com.twu.biblioteca.Types.UserAccount;
 import java.util.ArrayList;
 
 public class UserAuthenticator {
-    private Depot depot;
+    private Storage storage;
     private UserAccount activeUser;
 
-    public UserAuthenticator(Depot depot) {
-        this.depot = depot;
+    public UserAuthenticator(Storage storage) {
+        this.storage = storage;
     }
 
     public UserAccount checkUserCredentials(int bibliotecaId, String password) throws WrongPasswordException, WrongIdException {
-        ArrayList<UserAccount> usersList = depot.getUsersList();
+        ArrayList<UserAccount> usersList = storage.getUsersList();
 
         for (UserAccount user : usersList) {
             boolean usersIdMatch = bibliotecaId == user.getBibliotecaId();

@@ -11,18 +11,18 @@ import com.twu.biblioteca.Types.UserAccount;
 import java.util.Scanner;
 
 public class ViewCheckOutManager implements Task {
-    private Depot depot;
+    private Storage storage;
     private Scanner scanner;
 
-    public ViewCheckOutManager(Depot depot, Scanner scanner) {
-        this.depot = depot;
+    public ViewCheckOutManager(Storage storage, Scanner scanner) {
+        this.storage = storage;
         this.scanner = scanner;
     }
 
     @Override
     public void execute() {
-        CheckOutManager checkOutManager = new CheckOutManager(depot);
-        UserAuthenticator authenticator = new UserAuthenticator(depot);
+        CheckOutManager checkOutManager = new CheckOutManager(storage);
+        UserAuthenticator authenticator = new UserAuthenticator(storage);
 
         System.out.println("** Check Out **");
         try {

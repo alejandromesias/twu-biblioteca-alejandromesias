@@ -13,8 +13,8 @@ import static junit.framework.TestCase.assertEquals;
 public class MovieListerTest {
     @Test
     public void shouldReturnATextOfMovies() {
-        Depot depot = new Depot();
-        MovieLister movieLister = new MovieLister(depot);
+        Storage storage = new Storage();
+        MovieLister movieLister = new MovieLister(storage);
 
         String moviesList = movieLister.getMoviesList();
 
@@ -29,18 +29,18 @@ public class MovieListerTest {
 
     @Test
     public void shouldReturnAnArrayOfOnlyAvailableMovies() {
-        Depot depot = new Depot();
-        UserAccount aUser = depot.getUsersList().get(0);
-        Movie firstMovie = depot.getMoviesList().get(0);
-        Movie secondMovie = depot.getMoviesList().get(1);
+        Storage storage = new Storage();
+        UserAccount aUser = storage.getUsersList().get(0);
+        Movie firstMovie = storage.getMoviesList().get(0);
+        Movie secondMovie = storage.getMoviesList().get(1);
         CheckOut firstCheckOut = new CheckOut(aUser, firstMovie);
         CheckOut secondCheckOut = new CheckOut(aUser, secondMovie);
-        depot.addCheckout(firstCheckOut);
-        depot.addCheckout(secondCheckOut);
+        storage.addCheckout(firstCheckOut);
+        storage.addCheckout(secondCheckOut);
 
-        MovieLister movieLister = new MovieLister(depot);
+        MovieLister movieLister = new MovieLister(storage);
         ArrayList<Movie> availableMovies = movieLister.getAvailableMoviesList();
 
-        assertEquals(depot.getMoviesList().get(2), availableMovies.get(0));
+        assertEquals(storage.getMoviesList().get(2), availableMovies.get(0));
     }
 }

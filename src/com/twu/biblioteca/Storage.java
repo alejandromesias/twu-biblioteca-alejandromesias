@@ -6,13 +6,13 @@ import com.twu.biblioteca.Types.UserAccount;
 
 import java.util.ArrayList;
 
-public class Depot {
+public class Storage {
 
     private ArrayList<UserAccount> usersList;
     private ArrayList<Movie> moviesList;
     private ArrayList<CheckOut> checkOutsList = new ArrayList<CheckOut>();
 
-    public Depot() {
+    public Storage() {
         this.usersList = buildUsers();
         this.moviesList = buildMovies();
     }

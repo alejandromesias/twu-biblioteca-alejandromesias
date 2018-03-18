@@ -13,7 +13,7 @@ public class CheckOutManagerTest {
 
     @Test
     public void shouldRegisterACheckOutToKnownUser() throws WrongItemIdException {
-        Depot depot = new Depot();
+        Storage storage = new Storage();
         UserAccount testUser = new UserAccount(2223333,
                 "Password1",
                 "User1",
@@ -26,11 +26,11 @@ public class CheckOutManagerTest {
                 2010,
                 10);
         CheckOut expectedCheckout = new CheckOut(testUser, testMovie);
-        CheckOutManager manager = new CheckOutManager(depot);
+        CheckOutManager manager = new CheckOutManager(storage);
 
         manager.performCheckOut(testUser, testMovie.getMovieId());
 
-        CheckOut newCheckout = depot.getCheckOutsList().get(0);
+        CheckOut newCheckout = storage.getCheckOutsList().get(0);
 
         assertEquals(expectedCheckout.getUserAccount(), newCheckout.getUserAccount());
         assertEquals(expectedCheckout.getLentMovie(), newCheckout.getLentMovie());
@@ -38,14 +38,14 @@ public class CheckOutManagerTest {
 
     @Test(expected = WrongItemIdException.class)
     public void shouldThrowAnExceptionWhenInexistentMovieId() throws WrongItemIdException {
-        Depot depot = new Depot();
+        Storage storage = new Storage();
         UserAccount testUser = new UserAccount(2223333,
                 "Password1",
                 "User1",
                 "user1@email.com",
                 "0888888888");
         int fakeMovieId = 100;
-        CheckOutManager manager = new CheckOutManager(depot);
+        CheckOutManager manager = new CheckOutManager(storage);
 
         manager.performCheckOut(testUser, fakeMovieId);
     }
