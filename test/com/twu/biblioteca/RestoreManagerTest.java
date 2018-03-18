@@ -17,8 +17,8 @@ public class RestoreManagerTest {
     public void shouldRestoreAnItemFromKnownUser() throws WrongItemIdException {
         Storage storage = new Storage();
         UserAccount aUser = storage.getUsersList().get(1);
-        Movie aMovie = storage.getMoviesList().get(1);
-        int movieId = aMovie.getMovieId();
+        Movie aMovie = (Movie) storage.getMoviesList().get(1);
+        int movieId = aMovie.getItemId();
         CheckOut firstCheckOut = new CheckOut(aUser, aMovie);
         storage.addCheckout(firstCheckOut);
 

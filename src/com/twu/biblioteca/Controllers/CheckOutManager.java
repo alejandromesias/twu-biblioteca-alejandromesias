@@ -17,10 +17,10 @@ public class CheckOutManager {
 
     public boolean performCheckOut(UserAccount user, int movieId) throws WrongItemIdException {
         MovieLister movieLister = new MovieLister(storage);
-        ArrayList<Movie> movieList = movieLister.getAvailableMoviesList();
+        ArrayList<Movie> movieList = (ArrayList<Movie>)(Object) movieLister.getAvailableMoviesList();
 
         for (Movie movie : movieList) {
-            boolean movieIdMatch = movieId == movie.getMovieId();
+            boolean movieIdMatch = movieId == movie.getItemId();
             if (movieIdMatch) {
                 CheckOut checkOut = new CheckOut(user, movie);
                 storage.addCheckout(checkOut);

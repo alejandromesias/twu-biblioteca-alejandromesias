@@ -2,6 +2,7 @@ package com.twu.biblioteca.Controllers;
 
 import com.twu.biblioteca.Storage;
 import com.twu.biblioteca.Types.CheckOut;
+import com.twu.biblioteca.Types.Item;
 import com.twu.biblioteca.Types.Movie;
 
 import java.util.ArrayList;
@@ -14,17 +15,19 @@ public class MovieLister {
     }
 
     public String getMoviesList() {
-        ArrayList<Movie> MoviesList = getAvailableMoviesList();
+        ArrayList<Item> MoviesListOriginal = getAvailableMoviesList();
+        ArrayList<Movie> MoviesList =(ArrayList<Movie>)(Object) MoviesListOriginal;
 
         String listAsText;
 
         String fourColumnsFormat = "%-5s%-15s%-15s%-5s%-10s%n";
         String header = String.format(fourColumnsFormat, "ID", "Movie Name", "Director", "Year", "Rating");
         String body = "";
+
         for (Movie movie : MoviesList) {
             body = body + String.format(
                     fourColumnsFormat,
-                    movie.getMovieId(),
+                    movie.getItemId(),
                     movie.getName(),
                     movie.getDirector(),
                     movie.getYear(),
@@ -43,11 +46,11 @@ public class MovieLister {
     }
 
 
-    public ArrayList<Movie> getAvailableMoviesList() {
-        ArrayList<Movie> availableMovies = new ArrayList<>();
-        ArrayList<Movie> allMovies = storage.getMoviesList();
+    public ArrayList<Item> getAvailableMoviesList() {
+        ArrayList<Item> availableMovies = new ArrayList<>();
+        ArrayList<Item> allMovies = storage.getMoviesList();
 
-        for (Movie movie : allMovies) {
+        for (Item movie : allMovies) {
             boolean isAvailable = !isInCheckOuts(movie);
             if (isAvailable) {
                 availableMovies.add(movie);
@@ -56,7 +59,7 @@ public class MovieLister {
         return availableMovies;
     }
 
-    private boolean isInCheckOuts(Movie movie) {
+    private boolean isInCheckOuts(Item movie) {
         ArrayList<CheckOut> allCheckOuts = storage.getCheckOutsList();
         for (CheckOut checkOut : allCheckOuts) {
             boolean movieMatch = movie.equals(checkOut.getLentMovie());

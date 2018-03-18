@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import com.twu.biblioteca.Types.CheckOut;
+import com.twu.biblioteca.Types.Item;
 import com.twu.biblioteca.Types.Movie;
 import com.twu.biblioteca.Types.UserAccount;
 import org.junit.Before;
@@ -14,7 +15,7 @@ import static junit.framework.TestCase.assertTrue;
 public class StorageTest {
     Storage storage;
     ArrayList<UserAccount> fakeUsers;
-    ArrayList<Movie> fakeMovies;
+    ArrayList<Item> fakeMovies;
     ArrayList<CheckOut> fakeCheckOuts;
 
     @Before

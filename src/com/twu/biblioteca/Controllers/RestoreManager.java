@@ -20,7 +20,7 @@ public class RestoreManager {
         for (CheckOut checkout : checkOutsList) {
             boolean userMatch = aUser.equals(checkout.getUserAccount());
             if(userMatch){
-                boolean MovieIdMatch = aMovieId == checkout.getLentMovie().getMovieId();
+                boolean MovieIdMatch = aMovieId == checkout.getLentMovie().getItemId();
                 if(MovieIdMatch){
                     int checkOutIndex = checkOutsList.indexOf(checkout);
                     checkOutsList.remove(checkOutIndex);

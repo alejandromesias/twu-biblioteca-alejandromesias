@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import com.twu.biblioteca.Types.CheckOut;
+import com.twu.biblioteca.Types.Item;
 import com.twu.biblioteca.Types.Movie;
 import com.twu.biblioteca.Types.UserAccount;
 
@@ -9,20 +10,37 @@ import java.util.ArrayList;
 public class Storage {
 
     private ArrayList<UserAccount> usersList;
-    private ArrayList<Movie> moviesList;
+    private ArrayList<Item> moviesList;
+    private ArrayList<Item> booksList;
     private ArrayList<CheckOut> checkOutsList = new ArrayList<CheckOut>();
 
     public Storage() {
         this.usersList = buildUsers();
         this.moviesList = buildMovies();
+        this.booksList = buildBooks();
     }
 
     public ArrayList<UserAccount> getUsersList() {
         return usersList;
     }
 
-    public ArrayList<Movie> getMoviesList() {
+    public ArrayList<Item> getMoviesList() {
         return moviesList;
+    }
+
+    public ArrayList<Item> getBooksList() {
+        return booksList;
+    }
+
+    public ArrayList<Item> geItemsList(String itemType) throws Exception{
+        switch (itemType) {
+            case "movies":
+                getMoviesList();
+            case "books":
+                getBooksList();
+            default:
+                throw new Exception("invalid itemType");
+        }
     }
 
     public ArrayList<CheckOut> getCheckOutsList() {
@@ -62,8 +80,8 @@ public class Storage {
         return users;
     }
 
-    private ArrayList<Movie> buildMovies() {
-        ArrayList<Movie> movies = new ArrayList<Movie>();
+    private ArrayList<Item> buildMovies() {
+        ArrayList<Item> movies = new ArrayList<Item>();
         Movie movie;
         movie = new Movie(3,
                 "theMovie0",
@@ -79,6 +97,30 @@ public class Storage {
         movies.add(movie);
         movie = new Movie(5,
                 "theMovie2",
+                "Director2",
+                2012);
+        movies.add(movie);
+
+        return movies;
+    }
+
+    private ArrayList<Item> buildBooks() {
+        ArrayList<Item> movies = new ArrayList<Item>();
+        Movie movie;
+        movie = new Movie(3,
+                "theBook0",
+                "Director0",
+                2010,
+                10);
+        movies.add(movie);
+        movie = new Movie(4,
+                "theBook1",
+                "Director1",
+                2011,
+                9);
+        movies.add(movie);
+        movie = new Movie(5,
+                "theBook2",
                 "Director2",
                 2012);
         movies.add(movie);

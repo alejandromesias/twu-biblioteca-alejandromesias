@@ -22,7 +22,7 @@ public class MovieTest {
                 "testDirector", 2000,
                 10);
 
-        assertEquals(888, aMovie.getMovieId());
+        assertEquals(888, aMovie.getItemId());
         assertEquals("testName", aMovie.getName());
         assertEquals("testDirector", aMovie.getDirector());
         assertEquals(2000, aMovie.getYear());
@@ -34,7 +34,7 @@ public class MovieTest {
         aMovie = new Movie(888, "testName",
                 "testDirector", 2000);
 
-        assertEquals(888, aMovie.getMovieId());
+        assertEquals(888, aMovie.getItemId());
         assertEquals("testName", aMovie.getName());
         assertEquals("testDirector", aMovie.getDirector());
         assertEquals(2000, aMovie.getYear());

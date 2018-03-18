@@ -1,6 +1,6 @@
 package com.twu.biblioteca.Types;
 
-public class Movie {
+public class Movie implements Item{
     private int movieId;
     private String name;
     private String director;
@@ -28,7 +28,7 @@ public class Movie {
         );
     }
 
-    public int getMovieId() {
+    public int getItemId() {
         return movieId;
     }
 
@@ -52,7 +52,7 @@ public class Movie {
     public boolean equals(Object obj) {
 
         Movie movie = (Movie) obj;
-        if (movie.getMovieId() == this.getMovieId() &&
+        if (movie.getItemId() == this.getItemId() &&
                 movie.getName().equals(this.getName()) &&
                 movie.getDirector().equals(this.getDirector()) &&
                 movie.getYear() == (this.getYear())

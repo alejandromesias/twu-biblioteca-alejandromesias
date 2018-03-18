@@ -31,15 +31,15 @@ public class MovieListerTest {
     public void shouldReturnAnArrayOfOnlyAvailableMovies() {
         Storage storage = new Storage();
         UserAccount aUser = storage.getUsersList().get(0);
-        Movie firstMovie = storage.getMoviesList().get(0);
-        Movie secondMovie = storage.getMoviesList().get(1);
+        Movie firstMovie = (Movie) storage.getMoviesList().get(0);
+        Movie secondMovie = (Movie) storage.getMoviesList().get(1);
         CheckOut firstCheckOut = new CheckOut(aUser, firstMovie);
         CheckOut secondCheckOut = new CheckOut(aUser, secondMovie);
         storage.addCheckout(firstCheckOut);
         storage.addCheckout(secondCheckOut);
 
         MovieLister movieLister = new MovieLister(storage);
-        ArrayList<Movie> availableMovies = movieLister.getAvailableMoviesList();
+        ArrayList<Movie> availableMovies = (ArrayList<Movie>)(Object) movieLister.getAvailableMoviesList();
 
         assertEquals(storage.getMoviesList().get(2), availableMovies.get(0));
     }

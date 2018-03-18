@@ -28,7 +28,7 @@ public class CheckOutManagerTest {
         CheckOut expectedCheckout = new CheckOut(testUser, testMovie);
         CheckOutManager manager = new CheckOutManager(storage);
 
-        manager.performCheckOut(testUser, testMovie.getMovieId());
+        manager.performCheckOut(testUser, testMovie.getItemId());
 
         CheckOut newCheckout = storage.getCheckOutsList().get(0);
 
