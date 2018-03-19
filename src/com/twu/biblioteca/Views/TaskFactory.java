@@ -26,6 +26,8 @@ public class TaskFactory {
                 return new ViewCheckOutManager(storage, scanner);
             case "c":
                 return new ViewRestoreManager(storage, scanner);
+            case "d":
+                return new ViewBookLister(storage);
             case "u":
                 return new ViewUserInfo(storage, scanner);
             case "q":
@@ -41,11 +43,13 @@ public class TaskFactory {
         MenuOption listMovie = new MenuOption("List movies", "a");
         MenuOption checkoutMovie = new MenuOption("Check out movies", "b");
         MenuOption returnMovie = new MenuOption("Return movie", "c");
+        MenuOption listBook = new MenuOption("List books", "d");
         MenuOption userInfo = new MenuOption("View User Info", "u");
         MenuOption quit = new MenuOption("Quit", "q");
         options.add(listMovie);
         options.add(checkoutMovie);
         options.add(returnMovie);
+        options.add(listBook);
         options.add(userInfo);
         options.add(quit);
 
