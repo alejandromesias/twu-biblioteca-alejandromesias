@@ -13,8 +13,9 @@ import java.util.Scanner;
 public class ViewCheckOutManager implements Task {
     private Storage storage;
     private Scanner scanner;
+    private String itemType;
 
-    public ViewCheckOutManager(Storage storage, Scanner scanner) {
+    public ViewCheckOutManager(Storage storage, Scanner scanner, String itemType) {
         this.storage = storage;
         this.scanner = scanner;
     }
@@ -32,12 +33,12 @@ public class ViewCheckOutManager implements Task {
             String password = scanner.next();
             UserAccount verifiedUser = authenticator.checkUserCredentials(bibliotecaId, password);
             try {
-                System.out.println("Please enter the Id of the Movie to Checkout:");
-                int movieId = Integer.parseInt(scanner.next());
-                checkOutManager.performCheckOut(verifiedUser, movieId);
+                System.out.println("Please enter the Id of the "+ itemType +" to Checkout:");
+                int itemId = Integer.parseInt(scanner.next());
+                checkOutManager.performCheckOut(verifiedUser, itemId);
                 System.out.println("Thank you Enjoy!");
             } catch (NumberFormatException exception) {
-                System.out.println("Invalid movie ID format");
+                System.out.println("Invalid item ID format");
             } catch (WrongItemIdException exception) {
                 System.out.println(exception.getMessage());
             } catch (Exception exception) {

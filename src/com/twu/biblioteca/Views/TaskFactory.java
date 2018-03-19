@@ -23,7 +23,7 @@ public class TaskFactory {
             case "a":
                 return new ViewMovieLister(storage);
             case "b":
-                return new ViewCheckOutManager(storage, scanner);
+                return new ViewCheckOutManager(storage, scanner, "movie");
             case "c":
                 return new ViewRestoreManager(storage, scanner);
             case "d":
