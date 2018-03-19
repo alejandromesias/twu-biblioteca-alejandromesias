@@ -62,4 +62,28 @@ public class Movie implements Item{
             return super.equals(obj);
         }
     }
+
+    public String getHeaders(){
+        String fiveColumnsFormat = "%-5s%-15s%-15s%-5s%-10s%n";
+        return String.format(fiveColumnsFormat, "ID", "Movie Name", "Director", "Year", "Rating");
+    }
+
+    @Override
+    public String toString() {
+        String fiveColumnsFormat = "%-5s%-15s%-15s%-5s%-10s%n";
+        return String.format(
+                fiveColumnsFormat,
+                getItemId(),
+                getName(),
+                getDirector(),
+                getYear(),
+                validateRatingToPrint(getRating()));
+    }
+
+    private String validateRatingToPrint(int rating) {
+        if (rating > 0 && rating <= 10) {
+            return Integer.toString(rating);
+        }
+        return "unrated";
+    }
 }

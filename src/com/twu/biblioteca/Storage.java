@@ -31,10 +31,10 @@ public class Storage {
 
     public ArrayList<Item> geItemsList(String itemType) throws Exception{
         switch (itemType) {
-            case "movies":
-                getMoviesList();
-            case "books":
-                getBooksList();
+            case "movie":
+                return getMoviesList();
+            case "book":
+                return getBooksList();
             default:
                 throw new Exception("invalid itemType");
         }

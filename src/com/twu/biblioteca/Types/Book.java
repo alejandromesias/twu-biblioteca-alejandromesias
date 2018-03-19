@@ -48,4 +48,21 @@ public class Book implements Item {
             return super.equals(obj);
         }
     }
+
+    public String getHeaders(){
+        String fourColumnsFormat = "%-5s%-15s%-15s%-5s%n";
+        return String.format(fourColumnsFormat, "ID", "Book Name", "Author", "Year");
+    }
+
+    @Override
+    public String toString() {
+        String fourColumnsFormat = "%-5s%-15s%-15s%-5s%n";
+        return String.format(
+                fourColumnsFormat,
+                getItemId(),
+                getName(),
+                getAuthor(),
+                getYear());
+    }
+
 }

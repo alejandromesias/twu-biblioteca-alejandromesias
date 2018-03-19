@@ -8,4 +8,7 @@ public interface Item {
 
     boolean equals(Object obj);
 
+    String getHeaders();
+
+    String toString();
 }
