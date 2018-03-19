@@ -21,7 +21,7 @@ public class ViewCheckOutManager implements Task {
 
     @Override
     public void execute() {
-        CheckOutManager checkOutManager = new CheckOutManager(storage);
+        CheckOutManager checkOutManager = new CheckOutManager(storage, "movie");
         UserAuthenticator authenticator = new UserAuthenticator(storage);
 
         System.out.println("** Check Out **");

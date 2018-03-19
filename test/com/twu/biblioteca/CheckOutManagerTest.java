@@ -26,7 +26,7 @@ public class CheckOutManagerTest {
                 2010,
                 10);
         CheckOut expectedCheckout = new CheckOut(testUser, testMovie);
-        CheckOutManager manager = new CheckOutManager(storage);
+        CheckOutManager manager = new CheckOutManager(storage, "movie");
 
         manager.performCheckOut(testUser, testMovie.getItemId());
 
@@ -45,7 +45,7 @@ public class CheckOutManagerTest {
                 "user1@email.com",
                 "0888888888");
         int fakeMovieId = 100;
-        CheckOutManager manager = new CheckOutManager(storage);
+        CheckOutManager manager = new CheckOutManager(storage, "movie");
 
         manager.performCheckOut(testUser, fakeMovieId);
     }

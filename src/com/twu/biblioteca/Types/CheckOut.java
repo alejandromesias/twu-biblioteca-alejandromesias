@@ -2,13 +2,13 @@ package com.twu.biblioteca.Types;
 
 public class CheckOut {
     private UserAccount userAccount;
-    private Movie lentMovie;
+    private Item lentItem;
 
     private boolean checkOutActive;
 
-    public CheckOut(UserAccount userAccount, Movie movie) {
+    public CheckOut(UserAccount userAccount, Item item) {
         this.userAccount = userAccount;
-        this.lentMovie = movie;
+        this.lentItem = item;
         this.checkOutActive = true;
     }
 
@@ -16,8 +16,8 @@ public class CheckOut {
         return userAccount;
     }
 
-    public Movie getLentMovie() {
-        return lentMovie;
+    public Item getLentMovie() {
+        return lentItem;
     }
 
     public boolean isCheckOutActive() {
