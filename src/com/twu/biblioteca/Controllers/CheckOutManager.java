@@ -15,9 +15,9 @@ public class CheckOutManager {
         this.storage = storage;
     }
 
-    public boolean performCheckOut(UserAccount user, int movieId) throws WrongItemIdException {
-        MovieLister movieLister = new MovieLister(storage);
-        ArrayList<Movie> movieList = (ArrayList<Movie>)(Object) movieLister.getAvailableMoviesList();
+    public boolean performCheckOut(UserAccount user, int movieId) throws WrongItemIdException, Exception {
+        ItemLister movieLister = new ItemLister(storage, "movie");
+        ArrayList<Movie> movieList = (ArrayList<Movie>)(Object) movieLister.getAvailableItemsListOfType();
 
         for (Movie movie : movieList) {
             boolean movieIdMatch = movieId == movie.getItemId();

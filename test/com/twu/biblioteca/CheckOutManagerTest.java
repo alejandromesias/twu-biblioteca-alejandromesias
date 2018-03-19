@@ -12,7 +12,7 @@ import static junit.framework.TestCase.assertEquals;
 public class CheckOutManagerTest {
 
     @Test
-    public void shouldRegisterACheckOutToKnownUser() throws WrongItemIdException {
+    public void shouldRegisterACheckOutToKnownUser() throws WrongItemIdException, Exception {
         Storage storage = new Storage();
         UserAccount testUser = new UserAccount(2223333,
                 "Password1",
@@ -37,7 +37,7 @@ public class CheckOutManagerTest {
     }
 
     @Test(expected = WrongItemIdException.class)
-    public void shouldThrowAnExceptionWhenInexistentMovieId() throws WrongItemIdException {
+    public void shouldThrowAnExceptionWhenInexistentMovieId() throws WrongItemIdException, Exception {
         Storage storage = new Storage();
         UserAccount testUser = new UserAccount(2223333,
                 "Password1",

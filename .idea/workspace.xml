@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9019f2ae-0651-4b75-8e58-d9459b550751" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Controllers/MovieLister.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Controllers/MovieLister.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Views/TaskFactory.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Views/TaskFactory.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Views/ViewBookLister.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Views/ViewBookLister.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Views/ViewMovieLister.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Views/ViewMovieLister.java" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/ItemListerTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/ItemListerTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/MovieListerTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Controllers/CheckOutManager.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Controllers/CheckOutManager.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Controllers/MovieLister.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Views/ViewCheckOutManager.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Views/ViewCheckOutManager.java" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/CheckOutManagerTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/CheckOutManagerTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -138,16 +136,6 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Movie.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Types/Movie.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="764">
-                  <caret line="77" column="30" lean-forward="true" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="ItemLister.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Controllers/ItemLister.java">
               <provider selected="true" editor-type-id="text-editor">
@@ -157,19 +145,6 @@
                     <element signature="imports" expanded="true" />
                     <element signature="e#366#367#0" expanded="true" />
                     <element signature="e#438#439#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="StorageTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/StorageTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="361">
-                  <caret line="51" column="9" lean-forward="false" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
-                  <folding>
-                    <element signature="e#1630#1631#0" expanded="true" />
-                    <element signature="e#1683#1684#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -248,8 +223,8 @@
           <file leaf-file-name="CheckOutManager.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Controllers/CheckOutManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="178">
-                  <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+                <state relative-caret-position="390">
+                  <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
                   <folding>
                     <element signature="e#396#397#0" expanded="true" />
                     <element signature="e#434#435#0" expanded="true" />
@@ -258,16 +233,22 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="MovieLister.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Controllers/MovieLister.java">
+          <file leaf-file-name="ViewCheckOutManager.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Views/ViewCheckOutManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1065">
-                  <caret line="71" column="1" lean-forward="false" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#322#323#0" expanded="true" />
-                    <element signature="e#360#361#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="526">
+                  <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CheckOutManagerTest.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/CheckOutManagerTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="39" column="100" lean-forward="false" selection-start-line="39" selection-start-column="100" selection-end-line="39" selection-end-column="100" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -300,6 +281,7 @@
       <find>Depot</find>
       <find>getMovieId</find>
       <find>movie</find>
+      <find>getavailablem</find>
     </findStrings>
     <replaceStrings>
       <replace>Check out book</replace>
@@ -356,8 +338,6 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/ViewCheckOutManager.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/TaskFactory.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Views/ViewCheckOutManager.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/CheckOutManagerTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Controllers/RestoreManager.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Views/ViewRestoreManager.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/MovieListerTest.java" />
@@ -373,8 +353,10 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Views/ViewMovieLister.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Views/ViewBookLister.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Views/TaskFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Controllers/CheckOutManager.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Controllers/MovieLister.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Controllers/CheckOutManager.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Views/ViewCheckOutManager.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/CheckOutManagerTest.java" />
       </list>
     </option>
   </component>
@@ -530,7 +512,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.com.twu.biblioteca in biblioteca">
+  <component name="RunManager" selected="Application.BibliotecaApp">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -740,8 +722,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.com.twu.biblioteca in biblioteca" />
-        <item index="1" class="java.lang.String" itemvalue="Application.BibliotecaApp" />
+        <item index="0" class="java.lang.String" itemvalue="Application.BibliotecaApp" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.com.twu.biblioteca in biblioteca" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.ViewBookListerTest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.SingleBookTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.ExampleTest" />
@@ -765,12 +747,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.18 at 19h 30m 53s.xml">
-      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.18 at 19h 31m 48s.xml">
-      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.18 at 20h 05m 42s.xml">
       <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
     </history-entry>
@@ -793,6 +769,12 @@
       <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
     </history-entry>
     <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.18 at 21h 17m 11s.xml">
+      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.19 at 10h 05m 36s.xml">
+      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.03.19 at 10h 09m 46s.xml">
       <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -821,7 +803,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16881259" sideWeight="0.49342105" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22317597" sideWeight="0.49342105" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1164,28 +1146,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Views/ViewCheckOutManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Types/CheckOut.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/CheckOutManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="24" column="14" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1244,8 +1208,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/StorageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="51" column="9" lean-forward="false" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+        <state relative-caret-position="111">
+          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding>
             <element signature="e#1630#1631#0" expanded="true" />
             <element signature="e#1683#1684#0" expanded="true" />
@@ -1350,10 +1314,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Controllers/MovieLister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="71" column="1" lean-forward="false" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Controllers/CheckOutManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        <state relative-caret-position="390">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="e#396#397#0" expanded="true" />
             <element signature="e#434#435#0" expanded="true" />
@@ -1361,15 +1333,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Controllers/MovieLister.java">
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Views/ViewCheckOutManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="71" column="1" lean-forward="false" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="526">
+          <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/CheckOutManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="39" column="100" lean-forward="false" selection-start-line="39" selection-start-column="100" selection-end-line="39" selection-end-column="100" />
+          <folding />
         </state>
       </provider>
     </entry>

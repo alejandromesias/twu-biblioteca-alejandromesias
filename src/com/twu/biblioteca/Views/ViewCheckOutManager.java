@@ -40,6 +40,8 @@ public class ViewCheckOutManager implements Task {
                 System.out.println("Invalid movie ID format");
             } catch (WrongItemIdException exception) {
                 System.out.println(exception.getMessage());
+            } catch (Exception exception) {
+                System.out.println(exception.getMessage());
             }
         } catch (NumberFormatException exception) {
             System.out.println("Invalid biblioteca ID format");
