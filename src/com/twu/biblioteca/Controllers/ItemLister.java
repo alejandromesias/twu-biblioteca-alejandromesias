@@ -9,17 +9,19 @@ import java.util.ArrayList;
 
 public class ItemLister {
     private Storage storage;
+    private String itemType;
 
-    public ItemLister(Storage storage) {
+    public ItemLister(Storage storage, String itemType) {
         this.storage = storage;
+        this.itemType = itemType;
     }
 
-    public String getPrintableList(String itemType){
+    public String getPrintableList(){
         String printableList;
         ArrayList<Item> itemsList;
 
         try {
-            itemsList = storage.geItemsList(itemType);
+            itemsList = getAvailableItemsListOfType();
             String header = itemsList.get(0).getHeaders();
             String body = "";
 
@@ -34,24 +36,24 @@ public class ItemLister {
         return printableList;
     }
 
-    public ArrayList<Item> getAvailableMoviesList() {
-        ArrayList<Item> availableMovies = new ArrayList<>();
-        ArrayList<Item> allMovies = storage.getMoviesList();
+    public ArrayList<Item> getAvailableItemsListOfType() throws Exception {
+        ArrayList<Item> availableItemsOfType = new ArrayList<>();
+        ArrayList<Item> allItemsOfType = storage.geItemsList(itemType);
 
-        for (Item movie : allMovies) {
-            boolean isAvailable = !isInCheckOuts(movie);
+        for (Item item : allItemsOfType) {
+            boolean isAvailable = !isInCheckOuts(item);
             if (isAvailable) {
-                availableMovies.add(movie);
+                availableItemsOfType.add(item);
             }
         }
-        return availableMovies;
+        return availableItemsOfType;
     }
 
-    private boolean isInCheckOuts(Item movie) {
+    private boolean isInCheckOuts(Item item) {
         ArrayList<CheckOut> allCheckOuts = storage.getCheckOutsList();
         for (CheckOut checkOut : allCheckOuts) {
-            boolean movieMatch = movie.equals(checkOut.getLentMovie());
-            if (movieMatch) {
+            boolean itemMatch = item.equals(checkOut.getLentMovie());
+            if (itemMatch) {
                 return true;
             }
         }
